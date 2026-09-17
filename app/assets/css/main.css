@@ -1,0 +1,82 @@
+/* app/assets/css/main.css */
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+/* Content files are edited in Studio, so Tailwind must scan them for utility classes. */
+@source '../../../content';
+
+@theme {
+  /* Replaces default Tailwind sans font with Noto Sans */
+  --font-sans: 'Noto Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Noto Serif', Georgia, serif;
+
+  --color-rojo-50: #fff0f0;
+  --color-rojo-100: #ffdede;
+  --color-rojo-200: #ffc2c2;
+  --color-rojo-300: #ff9797;
+  --color-rojo-400: #ff5c5c;
+  --color-rojo-500: #ff2929;
+  --color-rojo-600: #f90909;
+  --color-rojo-700: #d20303;
+  --color-rojo-800: #ad0707;
+  --color-rojo-900: #8e0e0e;
+  --color-rojo-950: #6b0101; /* rojo original */
+
+  --color-vino-50: #fff0f0;
+  --color-vino-100: #ffdede;
+  --color-vino-200: #ffdad7;
+  --color-vino-300: #ffb3af;
+  --color-vino-400: #f07a76;
+  --color-vino-500: #a03e3c;
+  --color-vino-600: #812727;
+  --color-vino-700: #681417;
+  --color-vino-800: #480006;
+  --color-vino-900: #410005;
+  --color-vino-950: #2a1112;
+
+  --color-dorado-50: #f9f6ed;
+  --color-dorado-100: #f1ead1;
+  --color-dorado-200: #e5d6a6;
+  --color-dorado-300: #d6bb73;
+  --color-dorado-400: #c9a44d; /* dorado original */
+  --color-dorado-500: #b58d39;
+  --color-dorado-600: #9a702d;
+  --color-dorado-700: #795527;
+  --color-dorado-800: #654626;
+  --color-dorado-900: #573d25;
+  --color-dorado-950: #322011;
+
+  --color-champagne-50: #faf7f2;
+  --color-champagne-100: #f4ede0;
+  --color-champagne-200: #e9dac3; /* champagne original */
+  --color-champagne-300: #d9be98;
+  --color-champagne-400: #c99d6e;
+  --color-champagne-500: #bd8552;
+  --color-champagne-600: #b07246;
+  --color-champagne-700: #925b3c;
+  --color-champagne-800: #764a36;
+  --color-champagne-900: #603e2e;
+  --color-champagne-950: #331f17;
+
+  --color-marfil-50: #fef9f2; /* marfil original */
+  --color-marfil-100: #f8f3ec;
+  --color-marfil-200: #ece7e1;
+  --color-marfil-300: #e6e2db;
+  --color-marfil-400: #ded9d3;
+  --color-marfil-500: #c9c4bd;
+  --color-marfil-600: #897270;
+  --color-marfil-700: #564241;
+  --color-marfil-800: #32302c;
+  --color-marfil-900: #1d1c18;
+  --color-marfil-950: #1d1c18;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@source inline(
+  'bg-rojo-50 bg-rojo-100 bg-rojo-200 bg-rojo-300 bg-rojo-400 bg-rojo-500 bg-rojo-600 bg-rojo-700 bg-rojo-800 bg-rojo-900 bg-rojo-950 bg-vino-50 bg-vino-100 bg-vino-200 bg-vino-300 bg-vino-400 bg-vino-500 bg-vino-600 bg-vino-700 bg-vino-800 bg-vino-900 bg-vino-950 bg-dorado-50 bg-dorado-100 bg-dorado-200 bg-dorado-300 bg-dorado-400 bg-dorado-500 bg-dorado-600 bg-dorado-700 bg-dorado-800 bg-dorado-900 bg-dorado-950 bg-champagne-50 bg-champagne-100 bg-champagne-200 bg-champagne-300 bg-champagne-400 bg-champagne-500 bg-champagne-600 bg-champagne-700 bg-champagne-800 bg-champagne-900 bg-champagne-950 bg-marfil-50 bg-marfil-100 bg-marfil-200 bg-marfil-300 bg-marfil-400 bg-marfil-500 bg-marfil-600 bg-marfil-700 bg-marfil-800 bg-marfil-900 bg-marfil-950'
+);
