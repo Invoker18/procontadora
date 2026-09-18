@@ -9,7 +9,7 @@
       </h2>
       <div class="mt-10 grid gap-8 md:grid-cols-3">
         <article
-          class="border-dorado-400/50 bg-marfil-50 relative overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-linear hover:scale-103"
+          class="border-dorado-400/50 bg-marfil-50 relative overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-linear hover:scale-y-103"
         >
           <span
             class="text-dorado-400/25 absolute -top-4.5 -right-3.5 font-serif text-7xl font-bold"
@@ -37,7 +37,7 @@
           </div>
         </article>
         <article
-          class="border-dorado-400/50 bg-marfil-50 relative overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-linear hover:scale-103"
+          class="border-dorado-400/50 bg-marfil-50 relative overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-linear hover:scale-y-103"
         >
           <span
             class="text-dorado-400/25 absolute -top-4.5 -right-3.5 font-serif text-7xl font-bold"
@@ -66,7 +66,7 @@
           </div>
         </article>
         <article
-          class="border-dorado-400/50 bg-marfil-50 relative overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-linear hover:scale-103"
+          class="border-dorado-400/50 bg-marfil-50 relative overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-linear hover:scale-y-103"
         >
           <span
             class="text-dorado-400/25 absolute -top-4.5 -right-3.5 font-serif text-7xl font-bold"
