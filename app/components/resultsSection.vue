@@ -1,5 +1,5 @@
 <template>
-  <section id="resultados" class="bg-marfil-100 py-20 md:py-28">
+  <section id="resultados" class="bg-vino-950 py-20 md:py-28">
     <div
       class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 md:grid-cols-[0.9fr_1.1fr] lg:px-8"
     >

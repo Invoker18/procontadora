@@ -7,7 +7,7 @@
   >
     <navbar />
 
-    <UMain class="mx-auto w-full max-w-7xl flex-1 px-4 sm:px-6 lg:px-8">
+    <UMain class="divide-dorado-400/30 flex-1 divide-y">
       <slot />
     </UMain>
 

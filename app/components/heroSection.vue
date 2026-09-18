@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="border-dorado-400/30 relative overflow-hidden border-b py-14 md:py-24">
+  <section id="hero" class="relative overflow-hidden py-14 md:py-24">
     <div class="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 md:text-left lg:px-8">
       <p class="text-dorado-500 mb-4 text-sm font-bold tracking-[0.02em] uppercase">
         Especialistas financieros para el sector salud

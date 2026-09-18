@@ -15,7 +15,7 @@
         <article
           v-for="article in articles"
           :key="article.id"
-          class="border-dorado-400/30 bg-marfil-50 flex flex-col gap-4 rounded-lg border p-6"
+          class="border-dorado-400/30 bg-marfil-50 flex flex-col gap-6 rounded-lg border p-6"
         >
           <div class="flex items-center justify-between">
             <UButton
@@ -31,6 +31,7 @@
               {{ article.description }}
             </p>
           </div>
+          <div class="bg-dorado-400/30 h-px w-full"></div>
           <div class="flex flex-col gap-2">
             <div
               v-for="item in article.items"
