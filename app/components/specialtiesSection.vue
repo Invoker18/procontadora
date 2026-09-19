@@ -20,7 +20,7 @@
           <div class="flex items-center justify-between">
             <UButton
               size="xl"
-              icon="i-lucide-lab:cross-square"
+              :icon="article.icon"
               class="bg-vino-50 text-vino-900 hover:bg-inherit"
             ></UButton>
             <p class="text-dorado-400 text-xs font-semibold uppercase">{{ article.category }}</p>
@@ -36,7 +36,7 @@
             <div
               v-for="item in article.items"
               :key="item"
-              class="text-success-700 flex items-center gap-2 text-xs"
+              class="text-vino-900 flex items-center gap-2 text-xs font-semibold"
             >
               <UIcon name="i-lucide-circle-check"></UIcon>
               {{ item }}
@@ -53,6 +53,7 @@ const articles = [
   {
     id: 1,
     category: 'Salud Humana',
+    icon: 'i-lucide-lab:cross-square',
     title: 'Clínicas y Centros Médicos',
     description:
       'Control de convenios con aseguradoras, conciliación de honorarios quirúrgicos y auditoría diaria de cobranza ambulatoria.',
@@ -64,6 +65,7 @@ const articles = [
   {
     id: 2,
     category: 'Veterinaria',
+    icon: 'i-fa6-solid:paw',
     title: 'Hospitales y Clínicas Veterinarias',
     description:
       'Separación de márgenes entre hospitalización, quirófano, estética y farmacia de biológicos para erradicar pérdidas invisibles.',
@@ -75,6 +77,7 @@ const articles = [
   {
     id: 3,
     category: 'Laboratorio',
+    icon: 'i-heroicons:beaker-20-solid',
     title: 'Laboratorios de Diagnóstico',
     description:
       'Costeo preciso de reactivos por prueba, evaluación financiera para arrendamiento (leasing) de analizadores automatizados.',
