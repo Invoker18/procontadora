@@ -11,7 +11,7 @@
       <slot />
     </UMain>
 
-    <footer class="bg-vino-950 text-marfil-100 py-10">
+    <footer class="py-10">
       <div class="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
           <p class="text-dorado-300 font-serif text-xl font-bold">PRO Contadora</p>

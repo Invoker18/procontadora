@@ -38,7 +38,7 @@ const values = [
 <template>
   <section id="las-3t" class="py-20 md:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <p class="text-dorado-600 text-sm font-bold tracking-[0.02em] uppercase">
+      <p class="text-dorado-500 text-sm font-bold tracking-[0.02em] uppercase">
         Código de ética inquebrantable
       </p>
       <h2 class="text-vino-900 mt-3 font-serif text-3xl font-bold md:text-4xl">
@@ -51,13 +51,13 @@ const values = [
         <article
           v-for="value in values"
           :key="value.title"
-          class="group min-h-52 [perspective:1000px]"
+          class="group min-h-52 cursor-pointer [perspective:1000px]"
         >
           <div
-            class="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+            class="relative h-full w-full transition-transform duration-[600ms] [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] will-change-transform [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
           >
             <div
-              class="border-dorado-400/30 bg-marfil-50 absolute inset-0 rounded-lg border p-6 py-3 [backface-visibility:hidden]"
+              class="border-dorado-400/30 bg-marfil-50 absolute inset-0 rounded-lg border p-6 py-3 [-webkit-backface-visibility:hidden] [backface-visibility:hidden]"
             >
               <div class="flex items-center justify-between">
                 <div
@@ -73,7 +73,7 @@ const values = [
               </p>
             </div>
             <div
-              class="border-dorado-400/30 bg-rojo-950 text-marfil-50 absolute inset-0 flex [transform:rotateY(180deg)] flex-col gap-6 rounded-lg border p-6 [backface-visibility:hidden]"
+              class="border-dorado-400/30 bg-rojo-950 text-marfil-50 absolute inset-0 flex [transform:rotateY(180deg)] flex-col gap-6 rounded-lg border p-6 [-webkit-backface-visibility:hidden] [backface-visibility:hidden]"
             >
               <h3 class="text-dorado-400 font-bold uppercase">
                 {{ value.backTitle }}
@@ -81,7 +81,7 @@ const values = [
               <p class="text-marfil-50 text-sm italic">
                 {{ value.backDescription }}
               </p>
-              <p class="text-vino-50 mt-auto text-xs tracking-wide uppercase">
+              <p class="text-vino-50 mt-auto text-xs tracking-wider uppercase">
                 {{ value.backSubtitle }}
               </p>
             </div>
