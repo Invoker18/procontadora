@@ -17,7 +17,7 @@
           to="#contacto"
           size="xl"
           trailing-icon="i-lucide-arrow-right"
-          class="bg-rojo-950 hover:bg-rojo-900 text-marfil-50 shadow-dorado-400/50 rounded-lg px-5 py-2.5 font-semibold shadow-md transition-all duration-300 ease-linear hover:scale-105 active:scale-95"
+          class="bg-rojo-950 hover:bg-rojo-900 text-marfil-50 shadow-dorado-400/50 rounded-lg px-5 py-2.5 font-semibold shadow-md transition-all duration-300 ease-linear hover:-translate-y-1"
           :ui="{
             trailingIcon: 'text-dorado-500'
           }"
@@ -28,7 +28,7 @@
           to="#metodo-pro"
           size="xl"
           icon="heroicons:adjustments-horizontal-16-solid"
-          class="bg-marfil-50 hover:bg-marfil-100 text-rojo-950 border-dorado-400/30 rounded border px-6 py-3.5 font-bold transition-all duration-300 ease-linear hover:scale-105 active:scale-95"
+          class="bg-marfil-50 hover:bg-marfil-100 text-rojo-950 border-dorado-400/30 rounded border px-6 py-3.5 font-bold transition-all duration-300 ease-linear hover:-translate-y-1"
           :ui="{
             leadingIcon: 'text-dorado-400'
           }"
