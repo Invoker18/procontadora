@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
+const activeValue = ref<string | null>(null)
+
 const values = [
   {
     label: 'T1',
@@ -38,26 +42,39 @@ const values = [
 <template>
   <section id="las-3t" class="py-20 md:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <p class="text-dorado-500 text-sm font-bold tracking-[0.02em] uppercase">
-        Código de ética inquebrantable
-      </p>
-      <h2 class="text-vino-900 mt-3 font-serif text-3xl font-bold md:text-4xl">
-        Las 3T de PRO Contadora
-      </h2>
-      <p class="text-marfil-700 mt-4 max-w-2xl leading-7">
-        Nuestros tres valores rectores para acompañar tu práctica con rigor y compromiso directo.
-      </p>
+      <div class="flex flex-col justify-between gap-2 md:flex-row md:items-center">
+        <div class="flex flex-col gap-1">
+          <p class="text-dorado-500 text-sm font-bold tracking-[0.02em] uppercase">
+            Código de ética inquebrantable
+          </p>
+          <h2 class="text-vino-900 font-serif text-3xl font-bold md:text-4xl">
+            Las 3T de PRO Contadora
+          </h2>
+        </div>
+        <p class="text-marfil-700 max-w-sm text-sm md:self-end">
+          Nuestros tres valores rectores. Haz hover en cada tarjeta para conocer el compromiso
+          directo con tu práctica.
+        </p>
+      </div>
+
       <div class="mt-10 grid gap-5 md:grid-cols-3">
         <article
           v-for="value in values"
           :key="value.title"
-          class="group min-h-52 cursor-pointer [perspective:1000px]"
+          :aria-pressed="activeValue === value.title"
+          class="group cursor-pointer perspective-[1000px]"
+          role="button"
+          tabindex="0"
+          @click="activeValue = activeValue === value.title ? null : value.title"
+          @keydown.enter="activeValue = activeValue === value.title ? null : value.title"
+          @keydown.space.prevent="activeValue = activeValue === value.title ? null : value.title"
         >
           <div
-            class="relative h-full w-full transition-transform duration-[600ms] [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] will-change-transform [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
+            :class="{ 'transform-[rotateY(180deg)]': activeValue === value.title }"
+            class="grid w-full transition-transform duration-600 ease-in-out will-change-transform transform-3d group-hover:transform-[rotateY(180deg)]"
           >
             <div
-              class="border-dorado-400/30 bg-marfil-50 absolute inset-0 rounded-lg border p-6 py-3 [-webkit-backface-visibility:hidden] [backface-visibility:hidden]"
+              class="border-dorado-400/30 bg-marfil-50 col-start-1 row-start-1 rounded-lg border p-6 py-3 [-webkit-backface-visibility:hidden] backface-hidden"
             >
               <div class="flex items-center justify-between">
                 <div
@@ -73,7 +90,7 @@ const values = [
               </p>
             </div>
             <div
-              class="border-dorado-400/30 bg-rojo-950 text-marfil-50 absolute inset-0 flex [transform:rotateY(180deg)] flex-col gap-6 rounded-lg border p-6 [-webkit-backface-visibility:hidden] [backface-visibility:hidden]"
+              class="border-dorado-400/30 bg-rojo-950 text-marfil-50 col-start-1 row-start-1 flex transform-[rotateY(180deg)] flex-col gap-6 rounded-lg border p-6 [-webkit-backface-visibility:hidden] backface-hidden"
             >
               <h3 class="text-dorado-400 font-bold uppercase">
                 {{ value.backTitle }}

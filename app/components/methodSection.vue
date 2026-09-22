@@ -36,7 +36,7 @@
           </div>
         </article>
         <article
-          class="border-dorado-400/30 bg-marfil-50 hover:ring-dorado-400 relative overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-out hover:-translate-y-1 hover:ring-1"
+          class="border-dorado-400/30 bg-marfil-50 hover:ring-dorado-400/30 relative overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-out hover:-translate-y-1 hover:ring-1"
         >
           <span class="text-dorado-400/20 absolute top-0 right-3 font-serif text-7xl font-bold"
             >R</span

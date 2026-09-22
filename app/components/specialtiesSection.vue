@@ -15,7 +15,7 @@
         <article
           v-for="article in articles"
           :key="article.id"
-          class="border-dorado-400/30 bg-marfil-50 flex flex-col gap-6 rounded-lg border p-6"
+          class="border-dorado-400/30 bg-marfil-50 hover:ring-dorado-400/30 relative flex flex-col gap-6 overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-out hover:-translate-y-1 hover:ring-1"
         >
           <div class="flex items-center justify-between">
             <UButton
