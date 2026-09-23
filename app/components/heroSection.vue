@@ -37,24 +37,24 @@
         </UButton>
       </div>
 
-      <dl class="mt-12 grid max-w-3xl grid-cols-3 gap-4 pt-6 text-wrap">
-        <div
-          class="border-dorado-400/30 bg-marfil-50 grid min-h-32 place-content-center rounded-lg border px-8 text-center"
-        >
-          <dt class="text-dorado-500 text-2xl font-bold">22+</dt>
-          <dd class="text-marfil-700 mt-1 leading-5">Años de liderazgo hospitalario</dd>
+      <dl
+        class="divide-dorado-400/30 border-dorado-400/30 mt-12 grid max-w-3xl grid-cols-1 border-y py-4 sm:grid-cols-3 sm:divide-x sm:divide-y-0"
+      >
+        <div class="py-5 text-center sm:px-6 sm:text-left">
+          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">22+</dt>
+          <dd class="text-marfil-700 mt-2 max-w-30 text-sm leading-5">
+            Años de liderazgo hospitalario
+          </dd>
         </div>
-        <div
-          class="border-dorado-400/30 bg-marfil-50 grid min-h-32 place-content-center rounded-lg border px-8 text-center"
-        >
-          <dt class="text-dorado-500 text-2xl font-bold">12</dt>
-          <dd class="text-marfil-700 mt-1 leading-5">Años en dirección de laboratorios</dd>
+        <div class="py-5 text-center sm:px-6 sm:text-left">
+          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">12</dt>
+          <dd class="text-marfil-700 mt-2 max-w-30 text-sm leading-5">
+            Años en dirección de laboratorios
+          </dd>
         </div>
-        <div
-          class="border-dorado-400/30 bg-marfil-50 grid min-h-32 place-content-center rounded-lg border px-8 text-center"
-        >
-          <dt class="text-dorado-500 text-2xl font-bold">95%</dt>
-          <dd class="text-marfil-700 mt-1 leading-5">Flujo de caja optimizado</dd>
+        <div class="py-5 text-center sm:px-6 sm:text-left">
+          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">95%</dt>
+          <dd class="text-marfil-700 mt-2 max-w-30 text-sm leading-5">Flujo de caja optimizado</dd>
         </div>
       </dl>
     </div>

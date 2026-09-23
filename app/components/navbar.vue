@@ -57,7 +57,9 @@ onUnmounted(() => {
       </nav>
 
       <!-- CTA Button -->
-      <div class="ml-auto flex w-fit items-center justify-center gap-4 text-balance lg:ml-0">
+      <div
+        class="ml-auto hidden w-fit items-center justify-center gap-4 text-balance md:flex lg:ml-0"
+      >
         <UButton
           :to="cta.href"
           size="md"

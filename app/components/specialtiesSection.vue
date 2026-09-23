@@ -1,5 +1,5 @@
 <template>
-  <section id="especialidades" class="py-20 md:py-28">
+  <section id="especialidades2" class="py-20 md:py-28">
     <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
       <p class="text-dorado-600 text-sm font-bold tracking-[0.02em] uppercase">
         Soluciones de nicho
@@ -31,7 +31,7 @@
               {{ article.description }}
             </p>
           </div>
-          <div class="bg-dorado-400/30 h-px w-full"></div>
+          <div class="bg-dorado-400/30 mt-auto h-px w-full"></div>
           <div class="flex flex-col gap-2">
             <div
               v-for="item in article.items"
