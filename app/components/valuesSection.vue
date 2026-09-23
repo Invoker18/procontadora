@@ -69,7 +69,7 @@ const values = [
           v-for="value in values"
           :key="value.title"
           :aria-pressed="!!flippedCards[value.title]"
-          class="group cursor-pointer perspective-[1200px]"
+          class="group cursor-pointer perspective-distant"
           role="button"
           tabindex="0"
           @click="toggleCard(value.title)"
@@ -95,7 +95,7 @@ const values = [
                     {{ value.label }}
                   </div>
                   <div
-                    class="from-dorado-400/40 via-dorado-400/20 h-px w-full bg-gradient-to-r to-transparent"
+                    class="from-dorado-400/40 via-dorado-400/20 h-px w-full bg-linear-to-r to-transparent"
                   ></div>
                   <UIcon
                     :name="value.icon"
@@ -122,7 +122,7 @@ const values = [
 
             <!-- BACK SIDE -->
             <div
-              class="border-dorado-400/50 text-marfil-50 from-vino-800 via-vino-900 to-vino-950 relative col-start-1 row-start-1 flex transform-[rotateY(180deg)] flex-col justify-between overflow-hidden rounded-xl border bg-linear-to-br p-7 shadow-2xl [-webkit-backface-visibility:hidden] backface-hidden"
+              class="border-dorado-400/50 text-marfil-50 from-vino-800 via-vino-900 to-vino-950 relative col-start-1 row-start-1 flex transform-[rotateY(180deg)_translateZ(1px)] flex-col justify-between overflow-hidden rounded-xl border bg-linear-to-br p-7 [-webkit-font-smoothing:antialiased] shadow-2xl [-webkit-backface-visibility:hidden] backface-hidden"
             >
               <!-- Ambient Subtle Gold Light Glow -->
               <div
