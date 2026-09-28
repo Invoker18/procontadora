@@ -1,9 +1,17 @@
 <template>
-  <section id="nosotros" class="py-20 md:py-28">
+  <section id="nosotros" class="bg-vino-950 text-marfil-50 relative overflow-hidden py-20 md:py-28">
+    <div
+      class="bg-dorado-500/10 pointer-events-none absolute -top-40 -left-40 h-125 w-125 rounded-full blur-3xl"
+    ></div>
+    <div
+      class="bg-vino-700/20 pointer-events-none absolute -right-40 -bottom-40 h-100 w-100 rounded-full blur-3xl"
+    ></div>
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="border-dorado-400/30 bg-marfil-50 overflow-hidden rounded-lg border shadow-lg">
+      <div class="overflow-hidden rounded-lg">
         <div class="grid lg:grid-cols-12">
-          <div class="relative min-h-80 lg:col-span-5 lg:min-h-full">
+          <div
+            class="border-dorado-400/30 relative min-h-80 rounded-lg border lg:col-span-5 lg:min-h-full"
+          >
             <img
               :src="'/images/pro-contadora/marisela-sanchez.jpg'"
               alt="Marisela Sánchez, fundadora y CFO Estratégica de PRO Contadora"
@@ -22,53 +30,51 @@
               </span> -->
             </div>
           </div>
-          <div class="flex flex-col justify-between p-7 lg:col-span-7 lg:p-10">
+          <div class="flex flex-col justify-between pt-7 lg:col-span-7 lg:p-10">
             <div>
               <p
-                class="text-dorado-600 flex items-center gap-2 text-xs font-bold tracking-[0.08em] uppercase"
+                class="text-dorado-400 flex items-center gap-2 text-xs font-bold tracking-[0.08em] uppercase"
               >
                 <UIcon name="i-lucide-quote" class="size-5" />
                 Voz directiva
               </p>
-              <blockquote
-                class="text-vino-900 mt-4 max-w-2xl font-serif text-xl leading-8 italic md:text-2xl md:leading-9"
-              >
+              <blockquote class="mt-4 font-serif text-xl leading-8 italic md:text-2xl md:leading-9">
                 “Para nosotros la contabilidad no es llenar papeles; es la columna vertebral que
                 protege el esfuerzo de tu vida y te da la serenidad para cuidar a tus pacientes.”
               </blockquote>
-              <p class="text-marfil-700 mt-5 max-w-2xl leading-7">
+              <p class="text-marfil-50/80 mt-5 leading-7">
                 Con más de 22 años en auditoría hospitalaria y más de 12 años liderando la dirección
                 financiera de laboratorios clínicos, conjugamos el rigor de las cifras con un
                 entendimiento profundo del día a día médico.
               </p>
-              <div class="border-dorado-400/20 mt-7 grid gap-2 border-t pt-5 sm:grid-cols-3">
+              <div class="border-dorado-400/30 mt-7 grid gap-2 border-t pt-5 sm:grid-cols-3">
                 <div
-                  class="bg-marfil-100 text-vino-900 flex items-center gap-2 rounded p-2 text-xs font-bold"
+                  class="bg-marfil-50 text-vino-900 ring-dorado-400 flex items-center gap-2 rounded p-2 text-xs font-bold ring"
                 >
                   <UIcon name="i-lucide-building-2" class="text-dorado-500 size-5 shrink-0" />
                   Auditoría hospitalaria
                 </div>
                 <div
-                  class="bg-marfil-100 text-vino-900 flex items-center gap-2 rounded p-2 text-xs font-bold"
+                  class="bg-marfil-50 text-vino-900 ring-dorado-400 flex items-center gap-2 rounded p-2 text-xs font-bold ring"
                 >
                   <UIcon name="i-lucide-flask-conical" class="text-dorado-500 size-5 shrink-0" />
                   Laboratorios diagnósticos
                 </div>
                 <div
-                  class="bg-marfil-100 text-vino-900 flex items-center gap-2 rounded p-2 text-xs font-bold"
+                  class="bg-marfil-50 text-vino-900 ring-dorado-400 flex items-center gap-2 rounded p-2 text-xs font-bold ring"
                 >
                   <UIcon name="i-lucide-scale" class="text-dorado-500 size-5 shrink-0" />
                   Blindaje tributario
                 </div>
               </div>
             </div>
-            <div class="border-dorado-400/20 mt-7 flex items-center justify-between border-t pt-5">
-              <span class="text-dorado-600 text-xs font-bold tracking-[0.08em] uppercase"
+            <div class="border-dorado-400/30 mt-7 flex items-center justify-between border-t pt-5">
+              <span class="text-dorado-400 text-xs font-bold tracking-[0.08em] uppercase"
                 >PRO Contadora</span
               >
               <a
                 href="#contacto"
-                class="text-vino-900 hover:text-vino-700 inline-flex items-center gap-1 text-sm font-bold"
+                class="text-marfil-50 hover:text-marfil-300 inline-flex items-center gap-1 text-sm font-bold"
               >
                 Hablar directamente con Marisela
                 <UIcon name="i-lucide-chevron-right" class="size-4" />
