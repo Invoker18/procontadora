@@ -9,23 +9,27 @@
       </h2>
       <div class="mt-10 grid gap-6 md:grid-cols-2">
         <article
-          v-for="service in services"
-          :key="service.title"
-          class="bg-marfil-50 border-dorado-400/30 hover:ring-dorado-400/30 relative flex flex-col gap-3 overflow-hidden rounded-lg border p-6 transition-transform duration-300 ease-out hover:-translate-y-1 hover:ring-1"
+          v-for="(service, index) in services"
+          :key="index"
+          class="border-dorado-400/30 hover:ring-dorado-400/30 relative flex flex-col gap-3 overflow-hidden rounded-lg border bg-white p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:ring-1 lg:p-8"
         >
           <div class="flex items-center justify-between">
-            <UButton
-              size="xl"
-              :icon="service.icon"
-              class="bg-dorado-100 text-vino-900 hover:bg-inherit"
-            ></UButton>
-            <h5 class="bg-dorado-100 text-vino-800 rounded px-2 text-sm font-semibold uppercase">
+            <p class="text-dorado-400 font-serif text-2xl font-bold">0{{ index + 1 }}</p>
+
+            <h5
+              class="bg-dorado-100 text-dorado-600 rounded px-2 py-0.5 text-xs font-semibold uppercase"
+            >
               {{ service.subtitle }}
             </h5>
           </div>
-          <h3 class="text-vino-900 font-serif text-xl font-bold">{{ service.title }}</h3>
-          <p class="text-marfil-700">{{ service.description }}</p>
-          <div class="bg-vino-500/10 h-px w-full"></div>
+          <div class="bg-dorado-400/20 h-px w-full"></div>
+          <div class="flex flex-1 flex-col justify-center gap-3 py-3">
+            <h3 class="text-vino-900 font-serif text-xl font-bold lg:text-2xl">
+              {{ service.title }}
+            </h3>
+            <p class="text-marfil-700 text-sm">{{ service.description }}</p>
+          </div>
+          <div class="bg-dorado-400/20 h-px w-full"></div>
           <div class="flex items-center justify-between">
             <p class="text-vino-800 text-sm font-semibold">{{ service.cta }}</p>
           </div>
@@ -42,28 +46,31 @@ const services = [
     subtitle: 'Diagnóstico',
     icon: 'ph:list-magnifying-glass-bold',
     description:
-      'Localizamos cuentas por cobrar extraviadas, discrepancias en farmacia y cobros no reportados.',
+      'Conciliación de cobranza estancada con aseguradoras, auditoría de admisiones y saneamiento exhaustivo de cuentas por cobrar.',
     cta: 'Saneamiento y flujo inmediato'
   },
   {
     title: 'Blindaje y Estrategia Fiscal en Salud',
     subtitle: 'Cumplimiento',
     icon: 'ph:shield-check-bold',
-    description: 'Incentivos y deducciones legales para proteger tu operación y patrimonio.',
+    description:
+      'Cumplimiento tributario legítimo para clínicas y consultorios, aprovechamiento de estímulos sanitarios y deducción óptima de equipamiento médico.',
     cta: 'Cero multas, máxima deducción legal'
   },
   {
     title: 'Control de Costos e Insumos Críticos',
     subtitle: 'Operación',
     icon: 'ph:chart-bar-bold',
-    description: 'Matrices de costeo y conteo cíclico para fármacos, biológicos y reactivos.',
+    description:
+      'Erradicación de mermas invisibles en inventario, trazabilidad de anestésicos y material biológico de alto costo con costeo quirúrgico por hora.',
     cta: 'Márgenes claros por quirófano y laboratorio'
   },
   {
     title: 'Dirección Financiera Externa',
     subtitle: 'Dirección',
     icon: 'ph:user-circle-gear-bold',
-    description: 'Presupuestos, proyecciones y acompañamiento en comités directivos.',
+    description:
+      'Acompañamiento mensual en la toma de decisiones estratégicas, comités de socios, valuación de leasing médico y expansión de instalaciones.',
     cta: 'Decisiones estratégicas con datos en mano'
   }
 ]
