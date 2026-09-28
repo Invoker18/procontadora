@@ -30,7 +30,8 @@
             <p class="text-marfil-700 text-sm">{{ service.description }}</p>
           </div>
           <div class="bg-dorado-400/20 h-px w-full"></div>
-          <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <UIcon :name="service.icon" class="text-dorado-400 text-xl"></UIcon>
             <p class="text-vino-800 text-sm font-semibold">{{ service.cta }}</p>
           </div>
         </article>
