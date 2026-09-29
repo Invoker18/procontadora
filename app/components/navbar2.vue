@@ -41,6 +41,7 @@
           // Removed 'transform-gpu', added 'antialiased' and 'backface-hidden'
           link: 'text-vino-950 hover:text-rojo-950 data-[state=open]:text-rojo-950 font-semibold antialiased transition-transform duration-300 ease-out backface-hidden hover:-translate-y-px',
           childLink: 'hover:bg-champagne-200 rounded',
+          childLinkDescription: 'line-clamp-3 overflow-hidden',
           childLinkIcon: 'text-vino-950',
           viewport: 'bg-champagne-100 ring-dorado-400'
         }"
@@ -121,7 +122,7 @@ const items = ref<NavigationMenuItem[]>([
     ]
   },
   {
-    label: 'Método PRO',
+    label: 'E3 PRO',
     to: '#metodo-pro'
   },
   {
@@ -133,14 +134,32 @@ const items = ref<NavigationMenuItem[]>([
     to: '#servicios',
     children: [
       {
-        label: 'Auditoría Clínica',
-        to: '#auditoria',
-        icon: 'i-heroicons-clipboard-document-check'
+        label: 'Auditoría y Detección de Fugas Financieras',
+        icon: 'ph:list-magnifying-glass-bold',
+        description:
+          'Conciliación de cobranza estancada con aseguradoras, auditoría de admisiones y saneamiento exhaustivo de cuentas por cobrar.',
+        to: '#diagnóstico'
       },
       {
-        label: 'Planeación Fiscal',
-        to: '#planeacion-fiscal',
-        icon: 'i-heroicons-calculator'
+        label: 'Blindaje y Estrategia Fiscal en Salud',
+        icon: 'ph:shield-check-bold',
+        description:
+          'Cumplimiento tributario legítimo para clínicas y consultorios, aprovechamiento de estímulos sanitarios y deducción óptima de equipamiento médico.',
+        to: '#cumplimiento'
+      },
+      {
+        label: 'Control de Costos e Insumos Críticos',
+        icon: 'ph:chart-bar-bold',
+        description:
+          'Erradicación de mermas invisibles en inventario, trazabilidad de anestésicos y material biológico de alto costo con costeo quirúrgico por hora.',
+        to: '#operación'
+      },
+      {
+        label: 'Dirección Financiera Externa',
+        icon: 'ph:user-circle-gear-bold',
+        description:
+          'Acompañamiento mensual en la toma de decisiones estratégicas, comités de socios, valuación de leasing médico y expansión de instalaciones.',
+        to: '#dirección'
       }
     ]
   },

@@ -7,10 +7,10 @@ function submitForm() {
 </script>
 
 <template>
-  <section id="contacto" class="bg-marfil-100 py-20 md:py-28">
+  <section id="contacto" class="py-20 md:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div
-        class="border-dorado-400/30 grid overflow-hidden rounded-lg border bg-white shadow-xl lg:grid-cols-12"
+        class="border-dorado-400/30 bg-marfil-50 grid overflow-hidden rounded-lg border shadow-xl lg:grid-cols-12"
       >
         <div
           class="bg-vino-950 text-marfil-50 flex flex-col justify-between p-7 lg:col-span-5 lg:p-10"

@@ -73,6 +73,7 @@
 
 @layer base {
   html {
+    scroll-padding-top: 8rem; /* 96px */
     scroll-behavior: smooth;
   }
 }

@@ -12,5 +12,7 @@
     </UMain>
 
     <Footer />
+
+    <CookieBanner />
   </div>
 </template>

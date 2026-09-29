@@ -11,6 +11,7 @@
         <article
           v-for="(service, index) in services"
           :key="index"
+          :id="service.subtitle.toLowerCase()"
           class="border-dorado-400/30 hover:ring-dorado-400/30 relative flex flex-col gap-3 overflow-hidden rounded-lg border bg-white p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:ring-1 lg:p-8"
         >
           <div class="flex items-center justify-between">
