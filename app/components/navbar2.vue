@@ -42,7 +42,7 @@
           link: 'text-vino-950 hover:text-rojo-950 data-[state=open]:text-rojo-950 font-semibold antialiased transition-transform duration-300 ease-out backface-hidden hover:-translate-y-px',
           childLink: 'hover:bg-champagne-200 rounded',
           childLinkIcon: 'text-vino-950',
-          viewport: 'bg-champagne-100 ring-dorado-400 ring-2'
+          viewport: 'bg-champagne-100 ring-dorado-400'
         }"
       />
 

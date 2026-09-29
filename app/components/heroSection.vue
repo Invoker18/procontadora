@@ -44,19 +44,21 @@
       >
         <div class="py-5 text-center sm:px-6 sm:text-left">
           <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">22+</dt>
-          <dd class="text-marfil-700 mt-2 max-w-30 text-sm leading-5">
+          <dd class="text-marfil-700 mt-2 text-sm leading-5 sm:max-w-30">
             Años de liderazgo hospitalario
           </dd>
         </div>
         <div class="py-5 text-center sm:px-6 sm:text-left">
           <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">12</dt>
-          <dd class="text-marfil-700 mt-2 max-w-30 text-sm leading-5">
+          <dd class="text-marfil-700 mt-2 text-sm leading-5 sm:max-w-30">
             Años en dirección de laboratorios
           </dd>
         </div>
         <div class="py-5 text-center sm:px-6 sm:text-left">
           <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">95%</dt>
-          <dd class="text-marfil-700 mt-2 max-w-30 text-sm leading-5">Flujo de caja optimizado</dd>
+          <dd class="text-marfil-700 mt-2 text-sm leading-5 sm:max-w-30">
+            Flujo de caja optimizado
+          </dd>
         </div>
       </dl>
     </div>
