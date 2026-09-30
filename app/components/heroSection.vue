@@ -43,19 +43,25 @@
         class="divide-dorado-400/30 border-dorado-400/30 mt-12 grid max-w-3xl grid-cols-1 border-y py-4 sm:grid-cols-3 sm:divide-x sm:divide-y-0"
       >
         <div class="py-5 text-center sm:px-6 sm:text-left">
-          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">22+</dt>
+          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">
+            <count :from="0" :to="22" direction="up" :delay="0" :duration="2"></count>
+          </dt>
           <dd class="text-marfil-700 mt-2 text-sm leading-5 sm:max-w-30">
             Años de liderazgo hospitalario
           </dd>
         </div>
         <div class="py-5 text-center sm:px-6 sm:text-left">
-          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">12</dt>
+          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">
+            <count :from="0" :to="12" direction="up" :delay="0" :duration="2"></count>
+          </dt>
           <dd class="text-marfil-700 mt-2 text-sm leading-5 sm:max-w-30">
             Años en dirección de laboratorios
           </dd>
         </div>
         <div class="py-5 text-center sm:px-6 sm:text-left">
-          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">95%</dt>
+          <dt class="text-dorado-500 font-serif text-3xl leading-none font-bold">
+            <count :from="0" :to="95" direction="up" :delay="0" :duration="2"></count>%
+          </dt>
           <dd class="text-marfil-700 mt-2 text-sm leading-5 sm:max-w-30">
             Flujo de caja optimizado
           </dd>

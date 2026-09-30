@@ -2,12 +2,14 @@
   <section id="metodo-pro" class="text-vino-900 py-20 md:py-28 md:pt-25">
     <div class="mx-auto max-w-6xl text-pretty">
       <!-- Header -->
-      <div class="mx-auto mb-12 max-w-3xl text-center">
+      <div class="mx-auto mb-12 max-w-4xl text-center">
         <span class="text-dorado-400 text-xs font-bold tracking-widest uppercase">
           Metodología Exclusiva
         </span>
-        <h2 class="mt-2 mb-4 font-serif text-3xl font-bold md:text-5xl">
-          El Método PRO: Potencia · Reestructura · Optimiza
+        <h2 class="mt-2 mb-4 font-serif text-3xl leading-tight font-bold md:text-5xl">
+          El Método PRO:
+          <br />
+          Potencia · Reestructura · Optimiza
         </h2>
         <p class="text-vino-950/80 text-sm md:text-base">
           Un protocolo sistemático en 3 fases para pasar de la zozobra administrativa al control
