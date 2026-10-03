@@ -1,5 +1,13 @@
 <template>
   <section id="hero" class="relative overflow-hidden py-14 md:py-24">
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 hidden lg:block">
+      <div
+        class="border-dorado-400 absolute -top-[27rem] -right-[19rem] h-[80rem] w-[34rem] rotate-[-19deg] rounded-[50%] border"
+      ></div>
+      <div
+        class="border-dorado-400 absolute -top-[27rem] -right-[14rem] h-[80rem] w-[34rem] rotate-[-19deg] rounded-[50%] border"
+      ></div>
+    </div>
     <div
       class="relative z-10 mx-auto max-w-7xl px-4 text-center text-balance sm:px-6 md:text-left lg:px-8"
     >

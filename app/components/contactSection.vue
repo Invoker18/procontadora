@@ -1,8 +1,45 @@
 <script setup lang="ts">
-const submitted = ref(false)
+const form = reactive({
+  name: '',
+  business: '',
+  phone: '',
+  email: '',
+  specialty: '',
+  challenge: 'Control de fugas en insumos / fármacos',
+  acceptedPrivacy: false
+})
 
-function submitForm() {
-  submitted.value = true
+const submitted = ref(false)
+const errorMessage = ref('')
+const isSubmitting = ref(false)
+
+async function submitForm() {
+  submitted.value = false
+  errorMessage.value = ''
+  isSubmitting.value = true
+
+  try {
+    await $fetch('/api/send', {
+      method: 'POST',
+      body: form
+    })
+
+    submitted.value = true
+    Object.assign(form, {
+      name: '',
+      business: '',
+      phone: '',
+      email: '',
+      specialty: '',
+      challenge: 'Control de fugas en insumos / fármacos',
+      acceptedPrivacy: false
+    })
+  } catch {
+    errorMessage.value =
+      'No pudimos enviar tu solicitud. Intenta nuevamente o escríbenos a info@procontadora.com.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
@@ -62,6 +99,7 @@ function submitForm() {
               <label class="text-marfil-800 text-xs font-semibold"
                 >Nombre del titular o director *
                 <input
+                  v-model="form.name"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
                   placeholder="Ej. Dra. Sofía Ramos"
                   required
@@ -71,6 +109,7 @@ function submitForm() {
               <label class="text-marfil-800 text-xs font-semibold"
                 >Nombre de la clínica o negocio *
                 <input
+                  v-model="form.business"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
                   placeholder="Ej. Clínica Veterinaria San Miguel"
                   required
@@ -82,6 +121,7 @@ function submitForm() {
               <label class="text-marfil-800 text-xs font-semibold"
                 >WhatsApp o teléfono móvil *
                 <input
+                  v-model="form.phone"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
                   placeholder="+52 55 0000 0000"
                   required
@@ -91,6 +131,7 @@ function submitForm() {
               <label class="text-marfil-800 text-xs font-semibold"
                 >Correo electrónico directivo *
                 <input
+                  v-model="form.email"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
                   placeholder="direccion@tumedica.com"
                   required
@@ -102,30 +143,49 @@ function submitForm() {
               <label class="text-marfil-800 text-xs font-semibold"
                 >Especialidad o sector *
                 <select
+                  v-model="form.specialty"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
                   required
                 >
-                  <option disabled selected value="">Selecciona tu modalidad</option>
-                  <option>Clínica / Hospital quirúrgico</option>
-                  <option>Hospital / Clínica veterinaria</option>
-                  <option>Laboratorio diagnóstico / Imagen</option>
-                  <option>Consultorio médico especializado</option>
+                  <option disabled value="">Selecciona tu modalidad</option>
+                  <option value="Clínica / Hospital quirúrgico">
+                    Clínica / Hospital quirúrgico
+                  </option>
+                  <option value="Hospital / Clínica veterinaria">
+                    Hospital / Clínica veterinaria
+                  </option>
+                  <option value="Laboratorio diagnóstico / Imagen">
+                    Laboratorio diagnóstico / Imagen
+                  </option>
+                  <option value="Consultorio médico especializado">
+                    Consultorio médico especializado
+                  </option>
                 </select>
               </label>
               <label class="text-marfil-800 text-xs font-semibold"
                 >Desafío prioritario actual
                 <select
+                  v-model="form.challenge"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
                 >
-                  <option>Control de fugas en insumos / fármacos</option>
-                  <option>Incertidumbre o blindaje fiscal</option>
-                  <option>Flujo estancado / cuentas aseguradoras</option>
-                  <option>Expansión / Adquisición de equipo</option>
+                  <option value="Control de fugas en insumos / fármacos">
+                    Control de fugas en insumos / fármacos
+                  </option>
+                  <option value="Incertidumbre o blindaje fiscal">
+                    Incertidumbre o blindaje fiscal
+                  </option>
+                  <option value="Flujo estancado / cuentas aseguradoras">
+                    Flujo estancado / cuentas aseguradoras
+                  </option>
+                  <option value="Expansión / Adquisición de equipo">
+                    Expansión / Adquisición de equipo
+                  </option>
                 </select>
               </label>
             </div>
             <label class="text-marfil-700 flex items-start gap-2.5 pt-1 text-xs">
               <input
+                v-model="form.acceptedPrivacy"
                 class="border-dorado-400/30 text-vino-900 mt-0.5 size-4 rounded"
                 required
                 type="checkbox"
@@ -135,12 +195,22 @@ function submitForm() {
             </label>
             <UButton
               type="submit"
+              :loading="isSubmitting"
+              :disabled="isSubmitting"
               class="bg-vino-900 hover:bg-vino-950 text-marfil-50 mt-2 justify-center rounded py-3.5 font-semibold"
             >
               Agendar diagnóstico confidencial
               <UIcon name="i-lucide-lock-keyhole" class="size-4" />
             </UButton>
           </form>
+          <div
+            v-if="errorMessage"
+            class="mt-4 flex items-start gap-3 rounded border border-red-200 bg-red-50 p-4 text-sm text-red-900"
+            role="alert"
+          >
+            <UIcon name="i-lucide-circle-alert" class="size-5 shrink-0 text-red-700" />
+            {{ errorMessage }}
+          </div>
           <div
             v-if="submitted"
             class="mt-4 flex items-start gap-3 rounded border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900"

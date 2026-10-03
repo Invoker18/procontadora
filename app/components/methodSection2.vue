@@ -1,5 +1,5 @@
 <template>
-  <section id="metodo-pro" class="text-vino-900 py-20 md:py-28 md:pt-25">
+  <section id="metodo-pro" class="text-vino-900 relative py-20 md:py-28 md:pt-25">
     <div class="mx-auto max-w-6xl text-pretty">
       <!-- Header -->
       <div class="mx-auto mb-12 max-w-4xl text-center">

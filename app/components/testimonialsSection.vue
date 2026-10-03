@@ -30,13 +30,13 @@ const testimonios = [
 <template>
   <section id="testimonios" class="py-20 md:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <p class="text-dorado-600 text-sm font-bold tracking-[0.02em] uppercase">Casos reales</p>
+      <p class="text-dorado-400 text-sm font-bold tracking-[0.02em] uppercase">Casos reales</p>
       <h2 class="text-vino-900 mt-3 font-serif text-3xl font-bold md:text-4xl">
         La voz de quienes confiaron en el Método PRO
       </h2>
       <div class="mt-10 grid gap-5 md:grid-cols-3">
         <div v-for="(item, index) in testimonios" :key="index" class="flex">
-          <div class="h-full w-px border-2" :class="item.color"></div>
+          <div class="h-full w-px border" :class="item.color"></div>
           <figure class="flex flex-col gap-3 p-6">
             <UInputRating v-model="item.rating" readonly color="warning" size="sm" />
             <blockquote class="text-vino-800 leading-7 italic">
