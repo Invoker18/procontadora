@@ -32,6 +32,7 @@
       <!-- En el UNavigationMenu principal -->
       <UNavigationMenu
         highlight
+        highlight-color="neutral"
         variant="link"
         arrow
         :items="items"
@@ -39,10 +40,11 @@
         :ui="{
           arrow: 'bg-champagne-100/95 border-dorado-400',
           // Removed 'transform-gpu', added 'antialiased' and 'backface-hidden'
-          link: 'text-vino-950 hover:text-rojo-950 data-[state=open]:text-rojo-950 font-semibold antialiased transition-transform duration-300 ease-out backface-hidden hover:-translate-y-px',
-          childLink: 'hover:bg-champagne-200 rounded',
-          childLinkDescription: 'line-clamp-3 overflow-hidden',
-          childLinkIcon: 'text-vino-950',
+          link: 'text-vino-950 hover:text-rojo-950 data-[state=open]:text-rojo-950 data-active:after:bg-dorado-400 font-semibold antialiased transition-transform duration-300 ease-out backface-hidden hover:-translate-y-px',
+          childLink: 'data-active:bg-champagne-200 hover:bg-champagne-200 text-vino-900 rounded',
+
+          childLinkDescription: 'text-vino-950 hover:text-vino-950 line-clamp-3 overflow-hidden',
+          childLinkIcon: 'text-vino-900',
           viewport: 'bg-champagne-100 ring-dorado-400'
         }"
       />
@@ -68,7 +70,7 @@
           :ui="{
             link: 'hover:before:bg-champagne-200 text-vino-950 hover:text-rojo-950 p-3',
             childList: 'bg-champagne-100/95 border-dorado-400 p-2',
-            childLink: 'text-vino-950 hover:text-rojo-950',
+            childLink: 'data-active:bg-champagne-200 text-vino-950 hover:text-rojo-950',
             childLinkIcon: 'text-vino-950 hover:text-rojo-950',
             linkLeadingIcon: 'text-rojo-950 group-hover:text-rojo-950'
           }"
@@ -82,6 +84,7 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 const isScrolled = ref(false)
+const route = useRoute()
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
@@ -96,78 +99,125 @@ onUnmounted(() => {
 })
 
 // Estructura de items con submenús (children) para UNavigationMenu
-const items = ref<NavigationMenuItem[]>([
-  {
-    label: 'Especialidades',
-    to: '#especialidades',
-    children: [
-      {
-        label: 'Clínicas y Hospitales',
-        description: 'Gestión contable y financiera para centros médicos.',
-        to: '#clinicas',
-        icon: 'i-heroicons-building-office-2'
-      },
-      {
-        label: 'Medicina Veterinaria',
-        description: 'Control contable especializado para clínicas veterinarias.',
-        to: '#veterinaria',
-        icon: 'i-heroicons-heart'
-      },
-      {
-        label: 'Laboratorios y Bancos de Sangre',
-        description: 'Cumplimiento normativo y fiscal en el sector diagnóstico.',
-        to: '#laboratorios',
-        icon: 'i-heroicons-beaker'
-      }
-    ]
-  },
-  {
-    label: 'E3 PRO',
-    to: '#metodo-pro'
-  },
-  {
-    label: 'Las 3T',
-    to: '#las-3t'
-  },
-  {
-    label: 'Servicios',
-    to: '#servicios',
-    children: [
-      {
-        label: 'Auditoría y Detección de Fugas Financieras',
-        icon: 'ph:list-magnifying-glass-bold',
-        description:
-          'Conciliación de cobranza estancada con aseguradoras, auditoría de admisiones y saneamiento exhaustivo de cuentas por cobrar.',
-        to: '#diagnóstico'
-      },
-      {
-        label: 'Blindaje y Estrategia Fiscal en Salud',
-        icon: 'ph:shield-check-bold',
-        description:
-          'Cumplimiento tributario legítimo para clínicas y consultorios, aprovechamiento de estímulos sanitarios y deducción óptima de equipamiento médico.',
-        to: '#cumplimiento'
-      },
-      {
-        label: 'Control de Costos e Insumos Críticos',
-        icon: 'ph:chart-bar-bold',
-        description:
-          'Erradicación de mermas invisibles en inventario, trazabilidad de anestésicos y material biológico de alto costo con costeo quirúrgico por hora.',
-        to: '#operación'
-      },
-      {
-        label: 'Dirección Financiera Externa',
-        icon: 'ph:user-circle-gear-bold',
-        description:
-          'Acompañamiento mensual en la toma de decisiones estratégicas, comités de socios, valuación de leasing médico y expansión de instalaciones.',
-        to: '#dirección'
-      }
-    ]
-  },
-  {
-    label: 'Marisela Sánchez',
-    to: '#nosotros'
-  }
-])
+const items = computed<NavigationMenuItem[]>(() => {
+  const specialtiesActive = [
+    '#especialidades',
+    '#clinicas',
+    '#veterinaria',
+    '#laboratorios'
+  ].includes(route.hash)
+  const servicesActive = [
+    '#servicios',
+    '#diagnóstico',
+    '#cumplimiento',
+    '#operación',
+    '#dirección'
+  ].includes(route.hash)
+  const toolsActive = ['/calculadoras', '/recursos'].includes(route.path)
 
-const cta = { label: 'Diagnóstico Financiero', href: '#contacto' }
+  return [
+    {
+      label: 'Especialidades',
+      to: '/#especialidades',
+      active: specialtiesActive,
+      class: specialtiesActive ? 'after:bg-dorado-400' : undefined,
+      children: [
+        {
+          label: 'Clínicas y Hospitales',
+          description: 'Gestión contable y financiera para centros médicos.',
+          to: '/#especialidades',
+          active: route.hash === '#clinicas',
+          icon: 'i-heroicons-building-office-2'
+        },
+        {
+          label: 'Medicina Veterinaria',
+          description: 'Control contable especializado para clínicas veterinarias.',
+          to: '/#especialidades',
+          active: route.hash === '#veterinaria',
+          icon: 'i-heroicons-heart'
+        },
+        {
+          label: 'Laboratorios y Bancos de Sangre',
+          description: 'Cumplimiento normativo y fiscal en el sector diagnóstico.',
+          to: '/#especialidades',
+          active: route.hash === '#laboratorios',
+          icon: 'i-heroicons-beaker'
+        }
+      ]
+    },
+    {
+      label: 'E3 PRO',
+      to: '/#metodo-pro',
+      active: route.hash === '#metodo-pro'
+    },
+    {
+      label: 'Marisela Sánchez',
+      to: '/#nosotros',
+      active: route.hash === '#nosotros'
+    },
+    {
+      label: 'Servicios',
+      to: '/#servicios',
+      active: servicesActive,
+      class: servicesActive ? 'after:bg-dorado-400' : undefined,
+      children: [
+        {
+          label: 'Auditoría y Detección de Fugas Financieras',
+          icon: 'ph:list-magnifying-glass-bold',
+          description:
+            'Conciliación de cobranza estancada con aseguradoras, auditoría de admisiones y saneamiento exhaustivo de cuentas por cobrar.',
+          to: '/#diagnóstico',
+          active: route.hash === '#diagnóstico'
+        },
+        {
+          label: 'Blindaje y Estrategia Fiscal en Salud',
+          icon: 'ph:shield-check-bold',
+          description:
+            'Cumplimiento tributario legítimo para clínicas y consultorios, aprovechamiento de estímulos sanitarios y deducción óptima de equipamiento médico.',
+          to: '/#cumplimiento',
+          active: route.hash === '#cumplimiento'
+        },
+        {
+          label: 'Control de Costos e Insumos Críticos',
+          icon: 'ph:chart-bar-bold',
+          description:
+            'Erradicación de mermas invisibles en inventario, trazabilidad de anestésicos y material biológico de alto costo con costeo quirúrgico por hora.',
+          to: '/#operación',
+          active: route.hash === '#operación'
+        },
+        {
+          label: 'Dirección Financiera Externa',
+          icon: 'ph:user-circle-gear-bold',
+          description:
+            'Acompañamiento mensual en la toma de decisiones estratégicas, comités de socios, valuación de leasing médico y expansión de instalaciones.',
+          to: '/#dirección',
+          active: route.hash === '#dirección'
+        }
+      ]
+    },
+    {
+      label: 'Herramientas',
+      active: toolsActive,
+      class: toolsActive ? 'after:bg-dorado-400' : undefined,
+      children: [
+        {
+          label: 'Calculadoras',
+          icon: 'ph:calculator-bold',
+          description: 'Herramienta para realizar cálculos financieros específicos.',
+          to: '/calculadoras',
+          active: route.path === '/calculadoras'
+        },
+        {
+          label: 'Recursos',
+          icon: 'lucide:folder-down',
+          description: 'Descarga recursos financieros.',
+          to: '/recursos',
+          active: route.path === '/recursos'
+        }
+      ]
+    }
+  ]
+})
+
+const cta = { label: 'Diagnóstico Financiero', href: '/#contacto' }
 </script>
