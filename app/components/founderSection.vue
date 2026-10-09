@@ -10,6 +10,7 @@
       <div class="overflow-hidden rounded-lg">
         <div class="grid lg:grid-cols-12">
           <div
+            v-animate:fade-right="{ duration: 1200, delay: 300 }"
             class="border-dorado-400/30 relative min-h-80 rounded-lg border lg:col-span-5 lg:min-h-full"
           >
             <img
@@ -30,7 +31,10 @@
               </span> -->
             </div>
           </div>
-          <div class="flex flex-col justify-between pt-7 lg:col-span-7 lg:p-10">
+          <div
+            class="flex flex-col justify-between pt-7 lg:col-span-7 lg:p-10"
+            v-animate:fade-left="{ duration: 1200, delay: 300 }"
+          >
             <div>
               <p
                 class="text-dorado-400 flex items-center gap-2 text-xs font-bold tracking-[0.08em] uppercase"

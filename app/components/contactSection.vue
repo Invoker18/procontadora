@@ -52,7 +52,7 @@ async function submitForm() {
         <div
           class="bg-vino-950 text-marfil-50 flex flex-col justify-between p-7 lg:col-span-5 lg:p-10"
         >
-          <div>
+          <div v-animate:fade-right="{ duration: 1200, delay: 300 }">
             <p
               class="border-dorado-400/30 text-dorado-200 inline-flex items-center gap-2 rounded-full border bg-white/10 px-3 py-1 text-xs font-bold tracking-[0.06em] uppercase"
             >
@@ -93,7 +93,7 @@ async function submitForm() {
             </p>
           </div>
         </div>
-        <div class="p-7 lg:col-span-7 lg:p-10">
+        <div class="p-7 lg:col-span-7 lg:p-10" v-animate:fade-left="{ duration: 1200, delay: 300 }">
           <form class="grid gap-4" @submit.prevent="submitForm">
             <div class="grid gap-4 sm:grid-cols-2">
               <label class="text-marfil-800 text-xs font-semibold"

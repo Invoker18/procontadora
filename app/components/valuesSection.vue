@@ -66,7 +66,8 @@ const values = [
       <!-- Grid -->
       <div class="mt-12 grid gap-6 md:grid-cols-3">
         <article
-          v-for="value in values"
+          v-for="(value, index) in values"
+          v-animate:flip-up="{ threshold: 0.4, delay: index * 100 }"
           :key="value.title"
           :aria-pressed="!!flippedCards[value.title]"
           class="group cursor-pointer perspective-distant"

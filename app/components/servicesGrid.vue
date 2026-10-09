@@ -1,17 +1,20 @@
 <template>
   <section id="servicios" class="py-20 md:py-28">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <p class="text-dorado-500 text-sm font-bold tracking-[0.02em] uppercase">
-        Servicios especializados
-      </p>
-      <h2 class="text-vino-900 mt-3 font-serif text-3xl font-bold md:text-4xl">
-        Servicios financieros de precisión
-      </h2>
+      <div v-animate:zoom="{ duration: 1200, delay: 300 }">
+        <p class="text-dorado-500 text-sm font-bold tracking-[0.02em] uppercase">
+          Servicios especializados
+        </p>
+        <h2 class="text-vino-900 mt-3 font-serif text-3xl font-bold md:text-4xl">
+          Servicios financieros de precisión
+        </h2>
+      </div>
       <div class="mt-10 grid gap-6 md:grid-cols-2">
         <article
           v-for="(service, index) in services"
           :key="index"
           :id="service.subtitle.toLowerCase()"
+          v-animate:fade-down
           class="border-dorado-400/30 hover:ring-dorado-400/30 relative flex flex-col gap-3 overflow-hidden rounded-lg border bg-white p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg hover:ring-1 lg:p-8"
         >
           <div class="flex items-center justify-between">
