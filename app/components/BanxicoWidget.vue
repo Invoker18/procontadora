@@ -2,7 +2,7 @@
   <div class="border-vino-800 bg-vino-900 border-b px-3 py-1.5 text-white shadow-md">
     <div class="mx-auto flex flex-wrap items-center justify-between gap-4">
       <!-- Section Title / Brand -->
-      <div class="flex items-center gap-2">
+      <div class="hidden items-center gap-2 sm:flex">
         <span
           class="border-vino-500/50 bg-rojo-950/60 text-vino-400 rounded border px-2.5 py-1 text-xs font-semibold tracking-wider uppercase"
         >
