@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxt/fonts', '@vueuse/nuxt'],
+  modules: ['@nuxt/ui', '@nuxt/fonts', '@vueuse/nuxt', '@vercel/speed-insights/nuxt'],
   css: ['~/assets/css/main.css'], // <--- Add this line,
   ui: {
     colorMode: false
@@ -20,5 +20,5 @@ export default defineNuxtConfig({
         weights: [400, 600, 700]
       }
     ]
-  },
+  }
 })
