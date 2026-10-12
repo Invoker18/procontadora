@@ -27,6 +27,10 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   nuxtApp.vueApp.directive('animate', {
     mounted(el: HTMLElement, binding: DirectiveBinding<AnimateBindingValue | undefined>) {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return
+      }
+
       el.style.transitionProperty = 'all'
       el.style.transitionTimingFunction = 'cubic-bezier(0.16, 1, 0.3, 1)'
 

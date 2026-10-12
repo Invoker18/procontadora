@@ -13,8 +13,8 @@
             v-animate:fade-right="{ duration: 1200, delay: 300 }"
             class="border-dorado-400/30 relative min-h-80 rounded-lg border lg:col-span-5 lg:min-h-full"
           >
+            <!-- :src="'/images/pro-contadora/marisela-sanchez.jpg'" -->
             <img
-              :src="'/images/pro-contadora/marisela-sanchez.jpg'"
               alt="Marisela Sánchez, fundadora y CFO Estratégica de PRO Contadora"
               class="absolute inset-0 h-full w-full object-cover"
             />

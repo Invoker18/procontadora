@@ -1,11 +1,11 @@
 <template>
   <!-- Contenedor fijo flotante con Glassmorphism -->
   <header
-    class="pointer-events-none sticky top-0 right-0 left-0 z-50 flex justify-center transition-all duration-500 ease-in-out"
+    class="pointer-events-none sticky top-0 right-0 left-0 z-50 flex justify-center transition-all duration-500 ease-in-out motion-reduce:transition-none"
     :class="[isScrolled ? 'px-4 pt-4 sm:px-6' : 'px-0 pt-0']"
   >
     <UHeader
-      class="pointer-events-auto w-full border transition-all duration-500 ease-in-out"
+      class="pointer-events-auto w-full border transition-all duration-500 ease-in-out motion-reduce:transition-none"
       :class="[
         isScrolled
           ? 'bg-champagne-100/50 border-dorado-400/40 shadow-vino-950/10 h-20 max-w-6xl rounded-2xl bg-blend-color-dodge shadow-xl backdrop-blur-2xl sm:rounded-full'
@@ -18,11 +18,12 @@
       }"
     >
       <template #title>
-        <NuxtLink to="/" class="group block shrink-0">
+        <!-- Inside <template #title> -->
+        <NuxtLink to="/" @click.prevent="scrollToTop" class="group block shrink-0 cursor-pointer">
           <img
             src="/images/logo.png"
             alt="PRO Contadora"
-            class="mb-2 w-auto object-contain transition-all duration-300"
+            class="mb-2 w-auto object-contain transition-all duration-300 motion-reduce:transition-none"
             :class="[isScrolled ? 'h-11 md:h-10' : 'h-12']"
           />
         </NuxtLink>
@@ -40,7 +41,7 @@
         :ui="{
           arrow: 'bg-champagne-100/95 border-dorado-400',
           // Removed 'transform-gpu', added 'antialiased' and 'backface-hidden'
-          link: 'text-vino-950 hover:text-rojo-950 data-[state=open]:text-rojo-950 data-active:after:bg-dorado-400 font-semibold antialiased transition-transform duration-300 ease-out backface-hidden hover:-translate-y-px',
+          link: 'text-vino-950 hover:text-rojo-950 data-[state=open]:text-rojo-950 data-active:after:bg-dorado-400 font-semibold antialiased transition-transform duration-300 ease-out backface-hidden hover:-translate-y-px motion-reduce:transition-none motion-reduce:hover:transform-none',
           childLink: 'data-active:bg-champagne-200 hover:bg-champagne-200 text-vino-900 rounded',
 
           childLinkDescription: 'text-vino-950 hover:text-vino-950 line-clamp-3 overflow-hidden',
@@ -54,7 +55,7 @@
           :to="cta.href"
           :size="isScrolled ? 'sm' : 'md'"
           trailing-icon="i-lucide-arrow-right"
-          class="bg-rojo-950 hover:bg-rojo-900 text-marfil-50 hidden rounded-lg px-5 py-2.5 font-semibold shadow-xs transition-all duration-300 ease-linear hover:scale-105 active:scale-95 md:flex"
+          class="bg-rojo-950 hover:bg-rojo-900 text-marfil-50 hidden rounded-lg px-5 py-2.5 font-semibold shadow-xs transition-all duration-300 ease-linear hover:scale-105 active:scale-95 motion-reduce:transition-none motion-reduce:hover:transform-none motion-reduce:active:transform-none md:flex"
           :ui="{
             trailingIcon: 'text-dorado-400'
           }"
@@ -220,4 +221,21 @@ const items = computed<NavigationMenuItem[]>(() => {
 })
 
 const cta = { label: 'Diagnóstico Financiero', href: '/#contacto' }
+
+const router = useRouter()
+
+const scrollToTop = async () => {
+  // If we are already on the home page, just scroll smoothly
+  if (route.path === '/') {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // Optional: clear the hash from the URL without triggering a page reload
+    if (route.hash) {
+      router.push({ path: '/' })
+    }
+  } else {
+    // If we are on another page (like /calculadoras), navigate to home
+    await router.push('/')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+}
 </script>

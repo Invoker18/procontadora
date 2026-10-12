@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxt/fonts', '@vueuse/nuxt'],
+  modules: ['@nuxt/ui', '@nuxt/fonts', '@vueuse/nuxt', '@vercel/speed-insights'],
   css: ['~/assets/css/main.css'], // <--- Add this line,
   ui: {
     colorMode: false
@@ -21,4 +21,7 @@ export default defineNuxtConfig({
       }
     ]
   },
+  runtimeConfig: {
+    banxicoApiKey: process.env.BANXICO_API_KEY
+  }
 })
