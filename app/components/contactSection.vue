@@ -197,7 +197,7 @@ async function submitForm() {
               type="submit"
               :loading="isSubmitting"
               :disabled="isSubmitting"
-              class="bg-vino-900 hover:bg-vino-950 text-marfil-50 mt-2 justify-center rounded py-3.5 font-semibold"
+              class="bg-vino-900 hover:bg-vino-800 text-marfil-50 mt-2 justify-center rounded-lg py-3.5 font-semibold"
             >
               Agendar diagnóstico confidencial
               <UIcon name="i-lucide-lock-keyhole" class="size-4" />

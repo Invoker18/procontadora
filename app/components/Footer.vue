@@ -113,6 +113,20 @@
               </ULink>
             </UTooltip>
           </div>
+          <nav aria-label="Enlaces útiles" class="mt-6">
+            <p class="text-dorado-400 mb-2 font-bold">Explora</p>
+            <ul class="space-y-2">
+              <li>
+                <NuxtLink to="/calculadoras" class="hover:text-dorado-400">Calculadoras</NuxtLink>
+              </li>
+              <li><NuxtLink to="/recursos" class="hover:text-dorado-400">Recursos</NuxtLink></li>
+              <li>
+                <NuxtLink to="/politica-de-privacidad" class="hover:text-dorado-400"
+                  >Aviso de privacidad</NuxtLink
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -130,23 +144,23 @@ const currentYear = computed(() => new Date().getFullYear())
 const socialLinks = [
   {
     name: 'Instagram',
-    href: 'https://instagram.com',
+    href: 'https://www.instagram.com/procontadora/',
     icon: 'i-simple-icons-instagram'
   },
   {
     name: 'Facebook',
-    href: 'https://facebook.com',
+    href: 'https://www.facebook.com/procontadoramarisela',
     icon: 'i-simple-icons-facebook'
   },
   {
     name: 'YouTube',
-    href: 'https://youtube.com',
+    href: 'https://www.youtube.com/@procontadora',
     icon: 'i-simple-icons-youtube'
   },
   {
-    name: 'X (Twitter)',
-    href: 'https://x.com',
-    icon: 'i-simple-icons-x'
+    name: 'TikTok',
+    href: 'https://www.tiktok.com/@procontadora',
+    icon: 'i-simple-icons-tiktok'
   }
 ]
 </script>

@@ -13,11 +13,12 @@
             v-animate:fade-right="{ duration: 1200, delay: 300 }"
             class="border-dorado-400/30 relative min-h-80 rounded-lg border lg:col-span-5 lg:min-h-full"
           >
-            <!-- :src="'/images/pro-contadora/marisela-sanchez.jpg'" -->
-            <img
-              alt="Marisela Sánchez, fundadora y CFO Estratégica de PRO Contadora"
-              class="absolute inset-0 h-full w-full object-cover"
-            />
+            <div
+              aria-hidden="true"
+              class="from-vino-900 to-vino-950 absolute inset-0 grid place-items-center bg-linear-to-br"
+            >
+              <UIcon name="i-lucide-user-round" class="text-dorado-400/40 size-24" />
+            </div>
             <div
               class="border-dorado-400/30 bg-vino-950/95 text-marfil-50 absolute right-4 bottom-4 left-4 flex items-center justify-between rounded-lg border p-3 backdrop-blur-sm"
             >

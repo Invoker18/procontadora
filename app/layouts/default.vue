@@ -9,7 +9,7 @@
 
     <navbar />
 
-    <UMain class="divide-dorado-400/30 mx-auto w-full flex-1 divide-y">
+    <UMain class="divide-dorado-400/30 mx-auto flex w-full flex-1 flex-col divide-y">
       <slot />
     </UMain>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="border-vino-800 bg-vino-900 border-b px-3 py-1.5 text-white shadow-md">
+  <div class="border-vino-800 bg-vino-900 min-h-10 border-b px-3 py-1.5 text-white shadow-md">
     <div class="mx-auto flex flex-wrap items-center justify-between gap-4">
       <!-- Section Title / Brand -->
       <div class="hidden items-center gap-2 sm:flex">
@@ -11,7 +11,7 @@
       </div>
 
       <!-- Loading State -->
-      <div v-if="pending" class="text-champagne-400 animate-pulse text-sm">
+      <div v-if="pending || status === 'idle'" class="text-champagne-400 animate-pulse text-sm">
         Cargando indicadores de Banxico...
       </div>
 
@@ -42,5 +42,13 @@
 </template>
 
 <script setup>
-const { data: indicators, pending, error } = await useFetch('/api/banxico')
+const {
+  data: indicators,
+  pending,
+  error,
+  status
+} = await useFetch('/api/banxico', {
+  server: false,
+  lazy: true
+})
 </script>

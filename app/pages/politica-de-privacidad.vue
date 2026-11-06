@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-champagne-100/60 text-vino-950 min-h-screen pt-14 pb-28">
+  <div class="bg-champagne-100/60 text-vino-950 min-h-screen pt-14 pb-28">
     <UContainer class="max-w-4xl">
       <!-- Encabezado de la página -->
       <div class="border-dorado-400/30 mb-10 space-y-3 border-b pb-6">
@@ -131,17 +131,18 @@
         </UButton>
       </div>
     </UContainer>
-  </main>
+  </div>
 </template>
 
 <script setup lang="ts">
 const lastUpdated = '29 de Septiembre de 2026'
 
-// Configuración de SEO para la página
+usePageSeo(
+  'Aviso de privacidad',
+  'Aviso de privacidad integral y protección de datos personales de PRO Contadora - Marisela Sánchez.'
+)
+
 useSeoMeta({
-  title: 'Política de Privacidad - PRO Contadora',
-  description:
-    'Aviso de privacidad integral y protección de datos personales de PRO Contadora - Marisela Sánchez.',
-  robots: 'noindex, follow' // Evita la indexación excesiva si prefieres mantener la privacidad limpia
+  robots: 'noindex, follow'
 })
 </script>

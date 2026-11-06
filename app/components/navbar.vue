@@ -5,6 +5,7 @@
     :class="[isScrolled ? 'px-4 pt-4 sm:px-6' : 'px-0 pt-0']"
   >
     <UHeader
+      title="PRO Contadora"
       class="pointer-events-auto w-full border transition-all duration-500 ease-in-out motion-reduce:transition-none"
       :class="[
         isScrolled
@@ -18,15 +19,15 @@
       }"
     >
       <template #title>
-        <!-- Inside <template #title> -->
-        <NuxtLink to="/" @click.prevent="scrollToTop" class="group block shrink-0 cursor-pointer">
-          <img
-            src="/images/logo.png"
-            alt="PRO Contadora"
-            class="mb-2 w-auto object-contain transition-all duration-300 motion-reduce:transition-none"
-            :class="[isScrolled ? 'h-11 md:h-10' : 'h-12']"
-          />
-        </NuxtLink>
+        <img
+          src="/images/logo.png"
+          alt="PRO Contadora"
+          width="2211"
+          height="574"
+          class="mb-2 w-auto object-contain transition-all duration-300 motion-reduce:transition-none"
+          :class="[isScrolled ? 'h-11 md:h-10' : 'h-12']"
+          @click.prevent="scrollToTop"
+        />
       </template>
 
       <!-- Menú con animación de línea dorada en hover -->
@@ -114,7 +115,7 @@ const items = computed<NavigationMenuItem[]>(() => {
     '#operación',
     '#dirección'
   ].includes(route.hash)
-  const toolsActive = ['/calculadoras', '/recursos'].includes(route.path)
+  const toolsActive = route.path.startsWith('/calculadoras') || route.path === '/recursos'
 
   return [
     {
@@ -206,7 +207,7 @@ const items = computed<NavigationMenuItem[]>(() => {
           icon: 'ph:calculator-bold',
           description: 'Herramienta para realizar cálculos financieros específicos.',
           to: '/calculadoras',
-          active: route.path === '/calculadoras'
+          active: route.path.startsWith('/calculadoras')
         },
         {
           label: 'Recursos',
