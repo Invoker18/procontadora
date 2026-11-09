@@ -182,7 +182,7 @@ function clearFilters() {
         </div>
         <UButton
           to="/#contacto"
-          size="xl"
+          size="lg"
           trailing-icon="i-lucide-arrow-right"
           class="bg-vino-900 text-marfil-50 hover:bg-vino-700 w-fit shrink-0 rounded-lg px-6 py-3.5 font-semibold"
         >
