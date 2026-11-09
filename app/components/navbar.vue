@@ -9,13 +9,13 @@
       class="pointer-events-auto w-full border transition-all duration-500 ease-in-out motion-reduce:transition-none"
       :class="[
         isScrolled
-          ? 'bg-champagne-100/50 border-dorado-400/40 shadow-vino-950/10 h-20 max-w-6xl rounded-2xl bg-blend-color-dodge shadow-xl backdrop-blur-2xl sm:rounded-full'
-          : 'bg-champagne-100/80 border-dorado-400/30 h-22 max-w-full rounded-none border-x-0 border-t-0 border-b shadow-none backdrop-blur-md'
+          ? 'bg-marfil-50/95 border-champagne-300 shadow-vino-950/10 h-20 max-w-6xl rounded-2xl shadow-lg backdrop-blur-xl sm:rounded-full'
+          : 'bg-marfil-50/95 border-champagne-200 h-22 max-w-full rounded-none border-x-0 border-t-0 border-b shadow-none backdrop-blur-md'
       ]"
       :ui="{
         root: 'h-full border-0',
-        header: 'bg-champagne-100 h-20 px-4 sm:px-8',
-        body: 'bg-champagne-100 h-full'
+        header: 'h-20 bg-transparent px-4 sm:px-8',
+        body: 'bg-marfil-50 h-full'
       }"
     >
       <template #title>
@@ -38,16 +38,14 @@
         variant="link"
         arrow
         :items="items"
-        class="border-dorado-400"
         :ui="{
-          arrow: 'bg-champagne-100/95 border-dorado-400',
-          // Removed 'transform-gpu', added 'antialiased' and 'backface-hidden'
-          link: 'text-vino-950 hover:text-rojo-950 data-[state=open]:text-rojo-950 data-active:after:bg-dorado-400 font-semibold antialiased transition-transform duration-300 ease-out backface-hidden hover:-translate-y-px motion-reduce:transition-none motion-reduce:hover:transform-none',
-          childLink: 'data-active:bg-champagne-200 hover:bg-champagne-200 text-vino-900 rounded',
-
-          childLinkDescription: 'text-vino-950 hover:text-vino-950 line-clamp-3 overflow-hidden',
-          childLinkIcon: 'text-vino-900',
-          viewport: 'bg-champagne-100 ring-dorado-400'
+          arrow: 'border-champagne-300 bg-marfil-50',
+          link: 'text-vino-900 hover:text-vino-700 data-[state=open]:text-vino-700 data-active:after:bg-dorado-600 font-semibold antialiased transition-transform duration-200 ease-out hover:-translate-y-px motion-reduce:transition-none motion-reduce:hover:transform-none',
+          childLink:
+            'text-vino-900 hover:bg-champagne-100 data-active:bg-champagne-100 rounded-md',
+          childLinkDescription: 'text-marfil-700 line-clamp-3 overflow-hidden',
+          childLinkIcon: 'text-dorado-700',
+          viewport: 'border-champagne-200 bg-marfil-50 ring-1 ring-vino-950/5 shadow-lg'
         }"
       />
 
@@ -56,9 +54,9 @@
           :to="cta.href"
           :size="isScrolled ? 'sm' : 'md'"
           trailing-icon="i-lucide-arrow-right"
-          class="bg-rojo-950 hover:bg-rojo-900 text-marfil-50 hidden rounded-lg px-5 py-2.5 font-semibold shadow-xs transition-all duration-300 ease-linear hover:scale-105 active:scale-95 motion-reduce:transition-none motion-reduce:hover:transform-none motion-reduce:active:transform-none md:flex"
+          class="bg-vino-900 hover:bg-vino-700 text-marfil-50 hidden rounded-lg px-5 py-2.5 font-semibold shadow-sm transition-colors duration-200 motion-reduce:transition-none md:flex"
           :ui="{
-            trailingIcon: 'text-dorado-400'
+            trailingIcon: 'text-champagne-200'
           }"
         >
           {{ cta.label }}
@@ -70,11 +68,11 @@
           :items="items"
           orientation="vertical"
           :ui="{
-            link: 'hover:before:bg-champagne-200 text-vino-950 hover:text-rojo-950 p-3',
-            childList: 'bg-champagne-100/95 border-dorado-400 p-2',
-            childLink: 'data-active:bg-champagne-200 text-vino-950 hover:text-rojo-950',
-            childLinkIcon: 'text-vino-950 hover:text-rojo-950',
-            linkLeadingIcon: 'text-rojo-950 group-hover:text-rojo-950'
+            link: 'hover:before:bg-champagne-100 text-vino-900 hover:text-vino-700 p-3',
+            childList: 'border-champagne-200 bg-marfil-50 p-2',
+            childLink: 'data-active:bg-champagne-100 text-vino-900 hover:text-vino-700',
+            childLinkIcon: 'text-dorado-700',
+            linkLeadingIcon: 'text-dorado-700 group-hover:text-vino-700'
           }"
         />
       </template>

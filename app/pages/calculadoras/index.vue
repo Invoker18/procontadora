@@ -9,7 +9,7 @@ usePageSeo(
 const search = ref('')
 const selectedCategory = ref('Todos')
 const categories = ['Todos', ...new Set(calculators.map((calculator) => calculator.category))]
-const filteredCalculators = computed(() => {
+const filteredCalculators: any = computed(() => {
   const query = search.value.trim().toLocaleLowerCase('es')
   return calculators.filter(
     (calculator) =>
