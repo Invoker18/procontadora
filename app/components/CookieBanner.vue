@@ -32,12 +32,12 @@
 
         <!-- Botones de Acción del Banner -->
         <div
-          class="border-dorado-400/20 mt-4 flex flex-wrap items-center justify-end gap-2 border-t pt-3"
+          class="border-dorado-400/20 mt-4 flex flex-wrap items-center justify-end gap-1 border-t pt-3 sm:gap-2"
         >
           <UButton
             variant="ghost"
-            size="sm"
-            class="text-marfil-100/70 hover:bg-vino-900 hover:text-dorado-400"
+            size="xs"
+            class="text-marfil-100/70 hover:bg-vino-900 hover:text-dorado-400 whitespace-nowrap px-2"
             @click="isModalOpen = true"
           >
             Configurar
@@ -45,16 +45,16 @@
 
           <UButton
             variant="outline"
-            size="sm"
-            class="border-dorado-400/40 text-marfil-100 hover:bg-vino-900 ring-dorado-400"
+            size="xs"
+            class="border-dorado-400/40 text-marfil-100 hover:bg-vino-900 ring-dorado-400 whitespace-nowrap px-2"
             @click="rejectNonEssential"
           >
             Solo esenciales
           </UButton>
 
           <UButton
-            size="sm"
-            class="bg-rojo-950 text-marfil-50 hover:bg-rojo-900 font-semibold"
+            size="xs"
+            class="bg-rojo-950 text-marfil-50 hover:bg-rojo-900 whitespace-nowrap px-2 font-semibold"
             :ui="{ trailingIcon: 'text-dorado-400' }"
             trailing-icon="i-heroicons-check"
             @click="acceptAll"
@@ -68,9 +68,11 @@
     <!-- 2. MODAL DE CONFIGURACIÓN GRANULAR (Sintaxis Nuxt UI 3/4) -->
     <UModal
       v-model:open="isModalOpen"
+      scrollable
       :ui="{
+        overlay: 'grid place-items-center p-4',
         content:
-          'bg-vino-950 border-dorado-400/30 text-marfil-100 max-w-lg rounded-2xl border shadow-2xl backdrop-blur-2xl'
+          'bg-vino-950 border-dorado-400/30 text-marfil-100 w-full max-w-lg rounded-2xl border shadow-2xl backdrop-blur-2xl'
       }"
     >
       <template #content>

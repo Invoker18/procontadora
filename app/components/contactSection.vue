@@ -50,7 +50,7 @@ async function submitForm() {
         class="border-dorado-400/30 bg-marfil-50 grid overflow-hidden rounded-lg border shadow-xl lg:grid-cols-12"
       >
         <div
-          class="bg-vino-950 text-marfil-50 flex flex-col justify-between p-7 lg:col-span-5 lg:p-10"
+          class="bg-vino-950 text-marfil-50 flex flex-col justify-between p-5 lg:col-span-5 lg:p-10"
         >
           <div v-animate:fade-right="{ duration: 1200, delay: 300 }">
             <p
@@ -93,7 +93,7 @@ async function submitForm() {
             </p>
           </div>
         </div>
-        <div class="p-7 lg:col-span-7 lg:p-10" v-animate:fade-left="{ duration: 1200, delay: 300 }">
+        <div class="p-5 lg:col-span-7 lg:p-10" v-animate:fade-left="{ duration: 1200, delay: 300 }">
           <form class="grid gap-4" @submit.prevent="submitForm">
             <div class="grid gap-4 sm:grid-cols-2">
               <label class="text-marfil-800 text-xs font-semibold"

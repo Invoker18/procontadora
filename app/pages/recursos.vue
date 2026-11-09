@@ -58,8 +58,8 @@ function clearFilters() {
 </script>
 
 <template>
-  <div class="bg-marfil-50 flex flex-1 flex-col">
-    <section id="biblioteca" class="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-14">
+  <div class="bg-marfil-50 flex w-full flex-1 flex-col">
+    <section id="biblioteca" class="mx-auto w-full max-w-7xl px-5 py-10 sm:px-8 sm:py-14">
       <div class="grid gap-6 sm:grid-cols-[1fr_auto] sm:items-end">
         <div>
           <p class="text-dorado-700 text-xs font-bold tracking-[0.2em] uppercase">Biblioteca PRO</p>

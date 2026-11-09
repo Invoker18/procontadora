@@ -28,13 +28,13 @@
         </p>
       </div>
       <div
-        class="divide-dorado-400/80 mt-10 grid grid-cols-1 gap-3 divide-y md:grid-cols-3 md:gap-6 md:divide-x md:divide-y-0"
+        class="divide-dorado-400/80 mt-8 grid grid-cols-1 gap-3 divide-y md:mt-10 md:grid-cols-3 md:gap-6 md:divide-x md:divide-y-0"
       >
         <div
           v-for="(article, index) in articles"
           v-animate:fade-up="{ duration: 700, delay: index * 100 }"
           :key="article.id"
-          class="flex flex-col px-6 pb-3 md:pl-0"
+          class="flex flex-col pb-2 md:pl-0"
         >
           <div class="flex items-center justify-between py-4">
             <p class="text-dorado-500/60 font-serif text-4xl font-semibold">

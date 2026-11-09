@@ -5,7 +5,14 @@
     :class="[isScrolled ? 'px-4 pt-4 sm:px-6' : 'px-0 pt-0']"
   >
     <UHeader
+      v-model:open="mobileMenuOpen"
       title="PRO Contadora"
+      :menu="{
+        content: {
+          onOpenAutoFocus: preventMenuAutoFocus,
+          onCloseAutoFocus: preventMenuAutoFocus
+        }
+      }"
       class="pointer-events-auto w-full border transition-all duration-500 ease-in-out motion-reduce:transition-none"
       :class="[
         isScrolled
@@ -15,9 +22,21 @@
       :ui="{
         root: 'h-full border-0',
         header: 'h-20 bg-transparent px-4 sm:px-8',
-        body: 'bg-marfil-50 h-full'
+        body: 'bg-champagne-100 h-full px-4 py-4',
+        content: 'bg-champagne-100 divide-dorado-400/30'
       }"
     >
+      <template #toggle="{ open, toggle }">
+        <UButton
+          color="neutral"
+          variant="ghost"
+          :aria-label="open ? 'Close menu' : 'Open menu'"
+          :icon="open ? 'i-lucide-x' : 'i-lucide-menu'"
+          class="lg:hidden"
+          @click="toggleMobileMenu(toggle)"
+        />
+      </template>
+
       <template #title>
         <img
           src="/images/logo.png"
@@ -40,12 +59,12 @@
         :items="items"
         :ui="{
           arrow: 'border-champagne-300 bg-marfil-50',
-          link: 'text-vino-900 hover:text-vino-700 data-[state=open]:text-vino-700 data-active:after:bg-dorado-600 font-semibold antialiased transition-transform duration-200 ease-out hover:-translate-y-px motion-reduce:transition-none motion-reduce:hover:transform-none',
-          childLink:
-            'text-vino-900 hover:bg-champagne-100 data-active:bg-champagne-100 rounded-md',
+          link: 'text-vino-900 data-active:after:bg-dorado-600 font-semibold antialiased transition-transform duration-200 ease-out hover:-translate-y-px motion-reduce:transition-none motion-reduce:hover:transform-none',
+          childLink: 'text-vino-900 hover:bg-champagne-100 data-active:bg-champagne-100 rounded-md',
+          childLinkLabel: 'text-vino-900',
           childLinkDescription: 'text-marfil-700 line-clamp-3 overflow-hidden',
-          childLinkIcon: 'text-dorado-700',
-          viewport: 'border-champagne-200 bg-marfil-50 ring-1 ring-vino-950/5 shadow-lg'
+          childLinkIcon: 'text-dorado-700 group-hover:text-dorado-700',
+          viewport: 'border-champagne-200 bg-marfil-50 ring-vino-950/5 shadow-lg ring-1'
         }"
       />
 
@@ -67,14 +86,31 @@
         <UNavigationMenu
           :items="items"
           orientation="vertical"
+          class="w-full"
           :ui="{
-            link: 'hover:before:bg-champagne-100 text-vino-900 hover:text-vino-700 p-3',
-            childList: 'border-champagne-200 bg-marfil-50 p-2',
+            link: 'hover:before:bg-champagne-100 data-active:before:bg-champagne-100 data-[state=open]:before:bg-champagne-100 text-vino-900 hover:text-vino-700 data-active:text-vino-700 data-[state=open]:text-vino-700 p-3',
+            childList: 'border-dorado-400/30 bg-transparent p-1',
             childLink: 'data-active:bg-champagne-100 text-vino-900 hover:text-vino-700',
             childLinkIcon: 'text-dorado-700',
-            linkLeadingIcon: 'text-dorado-700 group-hover:text-vino-700'
+            linkLeadingIcon: 'text-dorado-700 group-hover:text-vino-700',
+            linkTrailing:
+              'absolute top-1/2 right-3 inline-flex -translate-y-1/2 items-center justify-center',
+            linkTrailingIcon:
+              'size-5 shrink-0 transition-transform duration-200 ease-out group-data-[state=open]:rotate-180 motion-reduce:transition-none'
           }"
         />
+        <div class="border-dorado-400/30 mt-6 border-t pt-6">
+          <UButton
+            :to="cta.href"
+            trailing-icon="i-lucide-arrow-right"
+            class="bg-vino-900 hover:bg-vino-700 text-marfil-50 w-full px-5 py-3.5 font-semibold transition-colors duration-200 motion-reduce:transition-none"
+            :ui="{
+              trailingIcon: 'text-champagne-200'
+            }"
+          >
+            {{ cta.label }}
+          </UButton>
+        </div>
       </template>
     </UHeader>
   </header>
@@ -84,10 +120,25 @@
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 const isScrolled = ref(false)
+const mobileMenuOpen = ref(false)
 const route = useRoute()
 
 const handleScroll = () => {
   isScrolled.value = window.scrollY > 20
+}
+
+function toggleMobileMenu(toggle: () => void) {
+  const scrollY = window.scrollY
+  toggle()
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: scrollY, behavior: 'auto' })
+    })
+  })
+}
+
+function preventMenuAutoFocus(event: Event) {
+  event.preventDefault()
 }
 
 onMounted(() => {
