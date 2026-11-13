@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/fonts', '@vueuse/nuxt', '@vercel/speed-insights', '@nuxtjs/seo'],
   css: ['~/assets/css/main.css'],
   site: {
-    url: 'https://procontadora.vercel.app',
+    url: 'https://procontadora.com',
     name: 'PRO Contadora',
     description:
       'Contabilidad y asesoría financiera para clínicas, hospitales y organizaciones de salud en México.',

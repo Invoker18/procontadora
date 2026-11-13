@@ -101,12 +101,13 @@ current tax rules before changing or relying on it.
 
 ## SEO and deployment
 
-The temporary canonical domain is `https://procontadora.vercel.app`. When the final
-domain is ready, set `NUXT_SITE_URL` to its preferred HTTPS origin in the production
-environment (and at build time if prerendering). Redirect the old domain to the new
-one at the hosting layer, verify the new property in Google Search Console, and submit
-`/sitemap.xml`. Set `NUXT_SITE_ENV=staging` on preview deployments to prevent indexing.
-Do not set it to `production` for preview environments.
+The canonical domain is `https://procontadora.com`. Remove any outdated
+`NUXT_SITE_URL` override or set it to that origin in the production environment
+(and at build time if prerendering). Configure HTTPS and permanent redirects from
+`https://procontadora.vercel.app` and other domain aliases to the canonical domain
+at the hosting layer, preserving the path and query string. Verify the new property
+in Google Search Console and submit `/sitemap.xml`. Set `NUXT_SITE_ENV=staging` on
+preview deployments to prevent indexing. Do not set it to `production` for previews.
 
 `@nuxtjs/seo` generates `/robots.txt`, canonical URLs, and Schema.org data. The sitemap
 includes the calculator routes from `app/utils/calculators.ts`; the privacy notice retains
