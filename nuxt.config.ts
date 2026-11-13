@@ -3,7 +3,7 @@ import { availableCalculators } from './app/utils/calculators'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxt/fonts', '@vueuse/nuxt', '@vercel/speed-insights', '@nuxtjs/seo'],
+  modules: ['@nuxt/ui', '@nuxt/fonts', '@vueuse/nuxt', '@vercel/speed-insights', '@vercel/analytics', '@nuxtjs/seo'],
   css: ['~/assets/css/main.css'],
   site: {
     url: 'https://procontadora.com',
