@@ -59,7 +59,9 @@
         :items="items"
         :ui="{
           arrow: 'border-champagne-300 bg-marfil-50',
-          link: 'text-vino-900 data-active:after:bg-dorado-600 font-semibold antialiased transition-transform duration-200 ease-out hover:-translate-y-px motion-reduce:transition-none motion-reduce:hover:transform-none',
+          link: 'text-vino-900 data-active:after:bg-dorado-600 hover:text-rojo-900 font-semibold antialiased transition-transform duration-200 ease-out hover:-translate-y-px motion-reduce:transition-none motion-reduce:hover:transform-none',
+          linkLabel: 'group-hover:text-rojo-900',
+          linkTrailingIcon: 'text-vino-900 group-hover:text-rojo-900',
           childLink: 'text-vino-900 hover:bg-champagne-100 data-active:bg-champagne-100 rounded-md',
           childLinkLabel: 'text-vino-900',
           childLinkDescription: 'text-marfil-700 line-clamp-3 overflow-hidden',
@@ -215,32 +217,28 @@ const items = computed<NavigationMenuItem[]>(() => {
         {
           label: 'Auditoría y Detección de Fugas Financieras',
           icon: 'ph:list-magnifying-glass-bold',
-          description:
-            'Análisis financiero y revisión de cuentas por cobrar.',
+          description: 'Análisis financiero y revisión de cuentas por cobrar.',
           to: '/#diagnóstico',
           active: route.hash === '#diagnóstico'
         },
         {
           label: 'Estrategia Fiscal para tu Negocio',
           icon: 'ph:shield-check-bold',
-          description:
-            'Orientación sobre obligaciones fiscales y planeación.',
+          description: 'Orientación sobre obligaciones fiscales y planeación.',
           to: '/#cumplimiento',
           active: route.hash === '#cumplimiento'
         },
         {
           label: 'Control de Costos e Insumos Críticos',
           icon: 'ph:chart-bar-bold',
-          description:
-            'Análisis de costos, inventario e insumos de tu operación.',
+          description: 'Análisis de costos, inventario e insumos de tu operación.',
           to: '/#operación',
           active: route.hash === '#operación'
         },
         {
           label: 'Dirección Financiera Externa',
           icon: 'ph:user-circle-gear-bold',
-          description:
-            'Acompañamiento financiero para las decisiones de tu negocio.',
+          description: 'Acompañamiento financiero para las decisiones de tu negocio.',
           to: '/#dirección',
           active: route.hash === '#dirección'
         }

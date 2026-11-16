@@ -118,6 +118,9 @@ its existing `noindex` policy. Update `public/og-image.png` and its matching alt
 when the brand changes. It is a static image, so social previews need no image-rendering
 service. Replace the footer's generic social links and placeholder telephone number with
 verified business details before publishing; they are deliberately excluded from schema.
+The favicon links are configured in `nuxt.config.ts`; when replacing the icon assets,
+update their version query strings there and in `public/site.webmanifest` to help browsers
+refresh cached icons. Nuxt UI's primary color is configured in `app/app.config.ts`.
 
 After deployment, inspect the homepage and calculator URLs in Search Console, submit
 the sitemap, and track queries, impressions, clicks, and position by page. Test Core
