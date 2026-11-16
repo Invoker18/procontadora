@@ -121,7 +121,7 @@ const steps = [
     phase: '02 · Fase Estructural',
     title: 'Reestructura',
     description:
-      'Manuales de control interno en farmacia/almacén, digitalización de egresos y saneamiento riguroso de pasivos.',
+      'Controles internos para inventarios, digitalización de egresos y revisión de pasivos.',
     highlight: 'Control estricto de insumos y almacén',
     icon: 'heroicons:adjustments-horizontal-16-solid'
   },
@@ -130,7 +130,7 @@ const steps = [
     phase: '03 · Fase de Blindaje',
     title: 'Optimiza',
     description:
-      'Planeación fiscal 100% legal para el sector salud y tableros ejecutivos en tiempo real para tomar decisiones con certeza.',
+      'Planeación fiscal y seguimiento financiero para apoyar las decisiones de tu negocio.',
     highlight: 'Estrategia fiscal y expansión rentable',
     icon: 'i-lucide-shield-check'
   }

@@ -48,22 +48,22 @@
                 protege el esfuerzo de tu vida y te da la serenidad para cuidar a tus pacientes.”
               </blockquote>
               <p class="text-marfil-50/80 mt-5 leading-7">
-                Con más de 22 años en auditoría hospitalaria y más de 12 años liderando la dirección
-                financiera de laboratorios clínicos, conjugamos el rigor de las cifras con un
-                entendimiento profundo del día a día médico.
+                Marisela Sánchez, fundadora de PRO Contadora, brinda asesoría contable y financiera
+                a personas y negocios. Su especialidad son las clínicas veterinarias, a las que
+                acompaña en la organización de sus finanzas y en la toma de decisiones.
               </p>
               <div class="border-dorado-400/30 mt-7 grid gap-2 border-t pt-5 sm:grid-cols-3">
                 <div
                   class="bg-marfil-50 text-vino-900 ring-dorado-400 flex items-center gap-2 rounded p-2 text-xs font-bold ring"
                 >
                   <UIcon name="i-lucide-building-2" class="text-dorado-500 size-5 shrink-0" />
-                  Auditoría hospitalaria
+                  Gestión contable
                 </div>
                 <div
                   class="bg-marfil-50 text-vino-900 ring-dorado-400 flex items-center gap-2 rounded p-2 text-xs font-bold ring"
                 >
-                  <UIcon name="i-lucide-flask-conical" class="text-dorado-500 size-5 shrink-0" />
-                  Laboratorios diagnósticos
+                  <UIcon name="i-fa6-solid:paw" class="text-dorado-500 size-5 shrink-0" />
+                  Especialidad veterinaria
                 </div>
                 <div
                   class="bg-marfil-50 text-vino-900 ring-dorado-400 flex items-center gap-2 rounded p-2 text-xs font-bold ring"

@@ -12,14 +12,14 @@
       class="relative z-10 mx-auto max-w-7xl px-4 text-center text-balance sm:px-6 md:text-left lg:px-8"
     >
       <p class="text-dorado-500 mb-4 text-sm font-bold tracking-[0.02em] uppercase">
-        Especialistas financieros para el sector salud
+        Asesoría contable con especialidad veterinaria
       </p>
       <h1 class="text-vino-900 max-w-4xl font-serif text-4xl leading-tight font-bold md:text-6xl">
-        Orden, blindaje fiscal y rentabilidad para tu clínica o centro de salud.
+        Contabilidad y asesoría fiscal para tu negocio.
       </h1>
       <p class="text-marfil-700 mt-6 max-w-2xl text-lg leading-7 md:text-xl">
-        Transformamos el caos administrativo y la incertidumbre tributaria en certeza directiva,
-        liquidez predecible y control estricto de insumos médicos.
+        Acompañamos a personas y negocios en México con estrategia financiera y control
+        administrativo, con especial atención a las clínicas veterinarias.
       </p>
 
       <div class="mt-8 flex flex-col justify-start gap-4 sm:flex-row">

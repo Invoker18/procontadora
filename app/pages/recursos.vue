@@ -1,7 +1,7 @@
 <script setup lang="ts">
 usePageSeo(
   'Recursos gratuitos',
-  'Descarga plantillas prácticas para organizar las finanzas y la administración de tu organización de salud.'
+  'Descarga plantillas prácticas para organizar los ingresos, gastos y la administración de tu actividad.'
 )
 
 const search = ref('')

@@ -28,7 +28,7 @@ const values = [
     icon: 'i-fa7-solid:scale-balanced',
     backTitle: 'Compromiso T2',
     backDescription:
-      'Exigimos estructura y rigor administrativo porque nuestro despacho opera con la misma precisión médica que tu equipo de especialistas.',
+      'Exigimos estructura y rigor administrativo porque nuestro despacho aplica esos mismos principios en su trabajo.',
     backSubtitle: 'Ejemplo y Disciplina'
   },
   {

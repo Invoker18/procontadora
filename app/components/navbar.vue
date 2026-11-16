@@ -174,8 +174,8 @@ const items = computed<NavigationMenuItem[]>(() => {
       class: specialtiesActive ? 'after:bg-dorado-400' : undefined,
       children: [
         {
-          label: 'Clínicas y Hospitales',
-          description: 'Gestión contable y financiera para centros médicos.',
+          label: 'Personas y Negocios',
+          description: 'Acompañamiento contable para distintas actividades.',
           to: '/#especialidades',
           active: route.hash === '#clinicas',
           icon: 'i-heroicons-building-office-2'
@@ -188,11 +188,11 @@ const items = computed<NavigationMenuItem[]>(() => {
           icon: 'i-heroicons-heart'
         },
         {
-          label: 'Laboratorios y Bancos de Sangre',
-          description: 'Cumplimiento normativo y fiscal en el sector diagnóstico.',
+          label: 'Asesoría Fiscal y Financiera',
+          description: 'Orientación fiscal y análisis para tu negocio.',
           to: '/#especialidades',
           active: route.hash === '#laboratorios',
-          icon: 'i-heroicons-beaker'
+          icon: 'i-heroicons-scale'
         }
       ]
     },
@@ -216,15 +216,15 @@ const items = computed<NavigationMenuItem[]>(() => {
           label: 'Auditoría y Detección de Fugas Financieras',
           icon: 'ph:list-magnifying-glass-bold',
           description:
-            'Conciliación de cobranza estancada con aseguradoras, auditoría de admisiones y saneamiento exhaustivo de cuentas por cobrar.',
+            'Análisis financiero y revisión de cuentas por cobrar.',
           to: '/#diagnóstico',
           active: route.hash === '#diagnóstico'
         },
         {
-          label: 'Blindaje y Estrategia Fiscal en Salud',
+          label: 'Estrategia Fiscal para tu Negocio',
           icon: 'ph:shield-check-bold',
           description:
-            'Cumplimiento tributario legítimo para clínicas y consultorios, aprovechamiento de estímulos sanitarios y deducción óptima de equipamiento médico.',
+            'Orientación sobre obligaciones fiscales y planeación.',
           to: '/#cumplimiento',
           active: route.hash === '#cumplimiento'
         },
@@ -232,7 +232,7 @@ const items = computed<NavigationMenuItem[]>(() => {
           label: 'Control de Costos e Insumos Críticos',
           icon: 'ph:chart-bar-bold',
           description:
-            'Erradicación de mermas invisibles en inventario, trazabilidad de anestésicos y material biológico de alto costo con costeo quirúrgico por hora.',
+            'Análisis de costos, inventario e insumos de tu operación.',
           to: '/#operación',
           active: route.hash === '#operación'
         },
@@ -240,7 +240,7 @@ const items = computed<NavigationMenuItem[]>(() => {
           label: 'Dirección Financiera Externa',
           icon: 'ph:user-circle-gear-bold',
           description:
-            'Acompañamiento mensual en la toma de decisiones estratégicas, comités de socios, valuación de leasing médico y expansión de instalaciones.',
+            'Acompañamiento financiero para las decisiones de tu negocio.',
           to: '/#dirección',
           active: route.hash === '#dirección'
         }

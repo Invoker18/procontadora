@@ -14,7 +14,7 @@
         <div class="space-y-3">
           <p class="text-dorado-400 font-serif text-xl font-bold tracking-wide">PRO Contadora</p>
           <p class="text-sm leading-6">
-            Rigor clínico y seguridad financiera para organizaciones de salud.
+            Asesoría contable para negocios, con especialidad en clínicas veterinarias.
           </p>
           <div
             class="text-dorado-400 mt-auto flex items-center gap-1 text-xs font-semibold uppercase"
@@ -36,7 +36,7 @@
                 name="i-heroicons-check-circle-16-solid"
                 class="text-dorado-400/80 h-4 w-4 shrink-0"
               />
-              <span>Clínicas y hospitales</span>
+              <span>Personas y negocios</span>
             </li>
             <li class="flex items-center gap-2">
               <UIcon
@@ -50,7 +50,7 @@
                 name="i-heroicons-check-circle-16-solid"
                 class="text-dorado-400/80 h-4 w-4 shrink-0"
               />
-              <span>Laboratorios y bancos de sangre</span>
+              <span>Orientación fiscal y financiera</span>
             </li>
           </ul>
         </div>

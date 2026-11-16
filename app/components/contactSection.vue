@@ -5,7 +5,7 @@ const form = reactive({
   phone: '',
   email: '',
   specialty: '',
-  challenge: 'Control de fugas en insumos / fármacos',
+  challenge: 'Control de costos e inventario',
   acceptedPrivacy: false
 })
 
@@ -31,7 +31,7 @@ async function submitForm() {
       phone: '',
       email: '',
       specialty: '',
-      challenge: 'Control de fugas en insumos / fármacos',
+      challenge: 'Control de costos e inventario',
       acceptedPrivacy: false
     })
   } catch {
@@ -60,7 +60,7 @@ async function submitForm() {
               Diagnóstico confidencial
             </p>
             <h2 class="mt-5 max-w-md font-serif text-3xl leading-tight font-bold md:text-4xl">
-              Inicia la reingeniería financiera de tu práctica de salud.
+              Inicia la transformación financiera de tu negocio.
             </h2>
             <p class="text-marfil-200 mt-5 max-w-md leading-7">
               Sesión preliminar de evaluación bajo estricto secreto profesional. Analizaremos las
@@ -89,7 +89,7 @@ async function submitForm() {
               >info@procontadora.com</a
             >
             <p class="mt-2 text-xs">
-              Cobertura nacional para clínicas, hospitales y centros veterinarios.
+              Cobertura nacional para negocios y clínicas veterinarias.
             </p>
           </div>
         </div>
@@ -101,7 +101,7 @@ async function submitForm() {
                 <input
                   v-model="form.name"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
-                  placeholder="Ej. Dra. Sofía Ramos"
+                  placeholder="Ej. Sofía Ramos"
                   required
                   type="text"
                 />
@@ -133,7 +133,7 @@ async function submitForm() {
                 <input
                   v-model="form.email"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
-                  placeholder="direccion@tumedica.com"
+                  placeholder="contacto@tunegocio.com"
                   required
                   type="email"
                 />
@@ -148,17 +148,17 @@ async function submitForm() {
                   required
                 >
                   <option disabled value="">Selecciona tu modalidad</option>
-                  <option value="Clínica / Hospital quirúrgico">
-                    Clínica / Hospital quirúrgico
+                  <option value="Negocio / Empresa">
+                    Negocio / Empresa
                   </option>
                   <option value="Hospital / Clínica veterinaria">
                     Hospital / Clínica veterinaria
                   </option>
-                  <option value="Laboratorio diagnóstico / Imagen">
-                    Laboratorio diagnóstico / Imagen
+                  <option value="Persona física">
+                    Persona física
                   </option>
-                  <option value="Consultorio médico especializado">
-                    Consultorio médico especializado
+                  <option value="Otro sector">
+                    Otro sector
                   </option>
                 </select>
               </label>
@@ -168,14 +168,14 @@ async function submitForm() {
                   v-model="form.challenge"
                   class="border-dorado-400/30 bg-marfil-50 focus:border-vino-700 mt-1.5 w-full rounded border px-3 py-3 text-xs font-normal outline-none"
                 >
-                  <option value="Control de fugas en insumos / fármacos">
-                    Control de fugas en insumos / fármacos
+                  <option value="Control de costos e inventario">
+                    Control de costos e inventario
                   </option>
                   <option value="Incertidumbre o blindaje fiscal">
                     Incertidumbre o blindaje fiscal
                   </option>
-                  <option value="Flujo estancado / cuentas aseguradoras">
-                    Flujo estancado / cuentas aseguradoras
+                  <option value="Flujo de efectivo / cuentas por cobrar">
+                    Flujo de efectivo / cuentas por cobrar
                   </option>
                   <option value="Expansión / Adquisición de equipo">
                     Expansión / Adquisición de equipo

@@ -97,17 +97,20 @@ The RESICO tool estimates monthly and annual ISR using the rate tables in articl
 113-E and 113-F, with user-entered withholdings and, for the annual calculation,
 monthly payments. It does not determine eligibility, filing obligations, special
 treatments, or the final amount payable. Review its rates and limitations against
-current tax rules before changing or relying on it.
+current tax rules before changing or relying on it. Keep the example and guidance in
+`app/components/ResicoCalculator.vue` consistent with the calculation and have fiscal
+content reviewed against current official sources before publication.
 
 ## SEO and deployment
 
-The canonical domain is `https://procontadora.com`. Remove any outdated
+The canonical domain is `https://www.procontadora.com`. Remove any outdated
 `NUXT_SITE_URL` override or set it to that origin in the production environment
 (and at build time if prerendering). Configure HTTPS and permanent redirects from
-`https://procontadora.vercel.app` and other domain aliases to the canonical domain
-at the hosting layer, preserving the path and query string. Verify the new property
-in Google Search Console and submit `/sitemap.xml`. Set `NUXT_SITE_ENV=staging` on
-preview deployments to prevent indexing. Do not set it to `production` for previews.
+`https://procontadora.com`, `https://procontadora.vercel.app`, and other domain aliases
+to the canonical domain at the hosting layer, preserving the path and query string.
+Verify the new property in Google Search Console and submit `/sitemap.xml`. Set
+`NUXT_SITE_ENV=staging` on preview deployments to prevent indexing. Do not set it to
+`production` for previews.
 
 `@nuxtjs/seo` generates `/robots.txt`, canonical URLs, and Schema.org data. The sitemap
 includes the calculator routes from `app/utils/calculators.ts`; the privacy notice retains
@@ -116,5 +119,8 @@ when the brand changes. It is a static image, so social previews need no image-r
 service. Replace the footer's generic social links and placeholder telephone number with
 verified business details before publishing; they are deliberately excluded from schema.
 
-Test deployed Core Web Vitals with PageSpeed Insights and Search Console; scores and
-rankings cannot be guaranteed.
+After deployment, inspect the homepage and calculator URLs in Search Console, submit
+the sitemap, and track queries, impressions, clicks, and position by page. Test Core
+Web Vitals with PageSpeed Insights. If the business is eligible, complete its Google
+Business Profile using verified details and genuine reviews. Rankings and indexing
+cannot be guaranteed.

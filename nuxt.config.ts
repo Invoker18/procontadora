@@ -6,10 +6,10 @@ export default defineNuxtConfig({
   modules: ['@nuxt/ui', '@nuxt/fonts', '@vueuse/nuxt', '@vercel/speed-insights', '@nuxtjs/seo'],
   css: ['~/assets/css/main.css'],
   site: {
-    url: 'https://procontadora.com',
+    url: 'https://www.procontadora.com',
     name: 'PRO Contadora',
     description:
-      'Contabilidad y asesoría financiera para clínicas, hospitales y organizaciones de salud en México.',
+      'Asesoría contable y financiera para negocios en México, con especialidad en clínicas veterinarias.',
     defaultLocale: 'es-MX'
   },
   sitemap: {
@@ -23,7 +23,12 @@ export default defineNuxtConfig({
     identity: {
       type: 'Organization',
       name: 'PRO Contadora',
-      logo: '/images/logo.png'
+      logo: '/images/logo.png',
+      founder: {
+        '@type': 'Person',
+        name: 'Marisela Sánchez',
+        jobTitle: 'Fundadora y CFO Estratégica'
+      }
     }
   },
   aiReady: { contentSignal: false },

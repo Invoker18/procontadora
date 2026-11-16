@@ -20,10 +20,10 @@ export const calculators: Calculator[] = [
   {
     slug: 'isr-resico-mensual',
     status: 'available',
-    title: 'ISR RESICO para personas físicas',
+    title: 'Calculadora ISR RESICO mensual y anual',
     category: 'Fiscal',
     description:
-      'Estima el ISR mensual o anual sobre ingresos efectivamente cobrados, sin IVA ni deducciones.'
+      'Calcula una estimación del ISR RESICO para personas físicas con ingresos cobrados, retenciones y pagos del periodo.'
   },
   {
     status: 'coming-soon',

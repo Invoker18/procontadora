@@ -1,7 +1,7 @@
 <script setup lang="ts">
 usePageSeo(
-  'Contabilidad y asesoría financiera para el sector salud',
-  'Asesoría contable, fiscal y financiera para clínicas, hospitales, veterinarias y laboratorios en México.'
+  'Contadora para negocios y veterinarias',
+  'Marisela Sánchez y PRO Contadora brindan asesoría contable y fiscal en México, con especialidad en clínicas veterinarias.'
 )
 </script>
 

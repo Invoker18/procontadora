@@ -17,14 +17,12 @@
         v-animate:zoom="{ duration: 1200, delay: 300 }"
       >
         <p class="text-dorado-400 text-xs font-bold tracking-[0.15rem] uppercase">
-          — Soluciones de nicho
+          — Asesoría a tu medida
         </p>
-        <h3 class="font-serif text-4xl font-semibold">
-          Entendemos la realidad donde se salvan vidas
-        </h3>
+        <h3 class="font-serif text-4xl font-semibold">Entendemos la realidad de tu negocio</h3>
         <p class="text-marfil-50/80 text-balance">
-          Diseñamos soluciones directivas a la medida de la complejidad operativa de la medicina
-          humana y veterinaria. Sin soluciones genéricas de oficina.
+          Ofrecemos contabilidad general para personas y negocios, con especialidad en clínicas
+          veterinarias y atención a las necesidades de cada actividad.
         </p>
       </div>
       <div
@@ -34,7 +32,7 @@
           v-for="(article, index) in articles"
           v-animate:fade-up="{ duration: 700, delay: index * 100 }"
           :key="article.id"
-          class="flex flex-col pb-2 md:pl-0"
+          class="flex flex-col pr-3 pb-2 md:pr-6 md:pl-0"
         >
           <div class="flex items-center justify-between py-4">
             <p class="text-dorado-500/60 font-serif text-4xl font-semibold">
@@ -77,15 +75,12 @@
 const articles = [
   {
     id: 1,
-    category: 'Salud Humana',
-    icon: 'i-lucide-lab:cross-square',
-    title: 'Clínicas y Centros Médicos',
+    category: 'Contabilidad',
+    icon: 'i-heroicons-building-office-2',
+    title: 'Personas y Negocios',
     description:
-      'Control de convenios con aseguradoras, conciliación de honorarios quirúrgicos y auditoría diaria de cobranza ambulatoria.',
-    items: [
-      'Recuperación de cartera en aseguradoras (-65% retraso)',
-      'Cálculo de punto de equilibrio por quirófano'
-    ]
+      'Acompañamiento contable para organizar la información financiera de tu actividad o negocio.',
+    items: ['Organización de ingresos y gastos', 'Seguimiento de cuentas por cobrar']
   },
   {
     id: 2,
@@ -101,15 +96,12 @@ const articles = [
   },
   {
     id: 3,
-    category: 'Laboratorio',
-    icon: 'i-heroicons:beaker-20-solid',
-    title: 'Laboratorios de Diagnóstico',
+    category: 'Fiscal',
+    icon: 'i-lucide-scale',
+    title: 'Asesoría Fiscal y Financiera',
     description:
-      'Costeo preciso de reactivos por prueba, evaluación financiera para arrendamiento (leasing) de analizadores automatizados.',
-    items: [
-      '12 años de experiencia directa en alta dirección',
-      'Alineación fiscal específica para pruebas diagnósticas'
-    ]
+      'Orientación fiscal y análisis financiero para apoyar las decisiones de tu negocio.',
+    items: ['Revisión de obligaciones fiscales', 'Información para decisiones financieras']
   }
 ]
 </script>
